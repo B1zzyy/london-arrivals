@@ -1,0 +1,693 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0313DEABE21B670C7ACBA21A /* DotMatrixText.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F21F56F46BE40FB56609AD /* DotMatrixText.swift */; };
+		032EFD2D7C4E15F2E6B267B2 /* LondonArrivalsWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1BE5D3DA975E3715E793B5 /* LondonArrivalsWidgetBundle.swift */; };
+		0B978D7C0E2F4111D3F3C1C9 /* LineStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A509F7084167C6C73B4E945D /* LineStatusView.swift */; };
+		0DFF69FF13CEF5DC7A548E0D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418CCE428E00FF779F746176 /* SettingsView.swift */; };
+		1E59E3A2C31380DFC982677B /* TfLStopPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832225157667A8A47C584863 /* TfLStopPoint.swift */; };
+		2223C826E8BF5384F580B7E1 /* LondonArrivalsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89702F293F9FB213617059B /* LondonArrivalsApp.swift */; };
+		22BB91AC0D5C9C6CF473533C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D0F1287B106D3594EF0AF2 /* ContentView.swift */; };
+		27CA019C80873C2AF1CBB1C6 /* TfLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9CD30E84BD0398EF134ABB /* TfLService.swift */; };
+		2F47D8B075682521A2AA4A33 /* TransportMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057B584018181128F65926FF /* TransportMode.swift */; };
+		3199AA76F3A3601A432194E5 /* ArrivalCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FB78D54A7F2D4F8CCD9E1D /* ArrivalCache.swift */; };
+		32A64C339A833D67DF9BE130 /* AudioAnnouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3620726C6CA02C7768E20169 /* AudioAnnouncer.swift */; };
+		359FBE9AE7B110054B76B26B /* NetworkRailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA86946E1F296542717539B /* NetworkRailService.swift */; };
+		3E0ADEB62286052CB5402E1B /* SelectCommuteIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4ED39EE86BE2D3A499FC75 /* SelectCommuteIntent.swift */; };
+		460546DCE75CEF6202CF9D09 /* TfLLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD123B2C35EB1AFB5149878 /* TfLLine.swift */; };
+		466057F4B292AE0CFC4C8CB6 /* BoardBezelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738D5F10CD8415635986C6F /* BoardBezelView.swift */; };
+		4A8A0F3229392EDFFE96048E /* SelectCommuteIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4ED39EE86BE2D3A499FC75 /* SelectCommuteIntent.swift */; };
+		4E6578D67C2EC80DFA81884C /* StationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BCD0A936E5D9AD5C2DD12E /* StationSearchView.swift */; };
+		53DB0D0B266CB73C2931F729 /* SmallWidgetBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F84C61F240D2DF2550115C /* SmallWidgetBoardView.swift */; };
+		5632F12FD805BB32D3AFE969 /* LondonArrivalsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A090A9D87FAEFCF91F216774 /* LondonArrivalsWidget.swift */; };
+		56BBB465678415C0AD45832A /* CommuteStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD50E7F0B310A4CE20D8CAB /* CommuteStorage.swift */; };
+		5A4117055E0E38BFD99A8237 /* LockScreenWidgetViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34735581334909DE165DEA73 /* LockScreenWidgetViews.swift */; };
+		5E05CC757688A1026CAAD08A /* TransportMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057B584018181128F65926FF /* TransportMode.swift */; };
+		5E160FE6A2AAE73BEA8778ED /* TfLLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD123B2C35EB1AFB5149878 /* TfLLine.swift */; };
+		5E70CA2516205D9590D6709E /* NetworkRailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA86946E1F296542717539B /* NetworkRailService.swift */; };
+		6AAB92198AF45D182934C0D5 /* ArrivalPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A9C0980CD869CBB206FAAC /* ArrivalPrediction.swift */; };
+		6AC2612E804B1253B01DA6C9 /* FavouriteCommute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC697EC5287DE923B282A97F /* FavouriteCommute.swift */; };
+		700D54D8D0A5F94D24877C38 /* TfLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9CD30E84BD0398EF134ABB /* TfLService.swift */; };
+		717AAE8AFBD8374692470C44 /* SmallWidgetBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F84C61F240D2DF2550115C /* SmallWidgetBoardView.swift */; };
+		8750FDBB369590C67DD931BD /* CommutesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61786B864810518207F44013 /* CommutesListView.swift */; };
+		8E2F7646B5B6C67E7AC72A90 /* CommuteWidgetTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A184539767D61D19892B7D78 /* CommuteWidgetTimelineProvider.swift */; };
+		9AE237DEC442ED223E1499CC /* ArrivalPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A9C0980CD869CBB206FAAC /* ArrivalPrediction.swift */; };
+		9FE45B1F9C3B28D29CA8C827 /* CommuteStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD50E7F0B310A4CE20D8CAB /* CommuteStorage.swift */; };
+		A1D056C698EF2AC2C759299E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B3FD20E6B218CACC732E6D4 /* Assets.xcassets */; };
+		A6E2294B191CD0BEF4B95F32 /* AudioAnnouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3620726C6CA02C7768E20169 /* AudioAnnouncer.swift */; };
+		A6E8EBB4F8C7641971555EEF /* LEDGridBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF280DF5C2A6C68D930E86FE /* LEDGridBackground.swift */; };
+		ABDD7A250249BE51AA3ACF78 /* LargeWidgetBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60F530C1FFF3714BF870F06 /* LargeWidgetBoardView.swift */; };
+		AC2109BAF4111AC64B61CEBA /* FavouriteCommute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC697EC5287DE923B282A97F /* FavouriteCommute.swift */; };
+		B696E8E31084FEE2DC41E27C /* LargeWidgetBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60F530C1FFF3714BF870F06 /* LargeWidgetBoardView.swift */; };
+		BAAE2C122D68A564C6DB71F5 /* BoardTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CB201F3F7301E4F286852C /* BoardTheme.swift */; };
+		BBAA0949B549FF78C30DC584 /* ArrivalCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FB78D54A7F2D4F8CCD9E1D /* ArrivalCache.swift */; };
+		C019CA69B6CF6AF676A81B71 /* LondonArrivalsWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 139C1B556E62C83A6764D988 /* LondonArrivalsWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C27F6750BDA6B8EEF7D1E0F7 /* AddCommuteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12B9FBC3FFEC51B69592432 /* AddCommuteView.swift */; };
+		C52BFBA1065C18B5F0534561 /* TfLStopPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832225157667A8A47C584863 /* TfLStopPoint.swift */; };
+		C6019E3235126F77FF26194A /* LiveBoardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFDA242526E4B8C43AF6310 /* LiveBoardDetailView.swift */; };
+		C687D45F668D4FA32CAE3A50 /* DotMatrixText.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F21F56F46BE40FB56609AD /* DotMatrixText.swift */; };
+		CDA89150674E95C7C7255A44 /* CommuteWidgetFlowProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6155EFB6ADA7C8127A53EA /* CommuteWidgetFlowProbe.swift */; settings = {COMPILER_FLAGS = "-D LA_WIDGET_FLOW_TEST"; }; };
+		D5928F0C2C548E7037A9255C /* WidgetGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22034E925EB0DEBDCA59966E /* WidgetGalleryView.swift */; };
+		D6582D84A050D652F888AE9E /* CommuteWidgetTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A184539767D61D19892B7D78 /* CommuteWidgetTimelineProvider.swift */; };
+		DC44A9C1DA260817DDF4BC57 /* DotMatrixBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7021F39D51BF4C0D406132 /* DotMatrixBoardView.swift */; };
+		E49F644C6DF4152206CC8BA4 /* MediumWidgetBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B750719A7312E94E8FD44B /* MediumWidgetBoardView.swift */; };
+		EE034CF3C31525FDE51489C9 /* DotMatrixBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7021F39D51BF4C0D406132 /* DotMatrixBoardView.swift */; };
+		F1F9BFFB323F0FEBFC412A59 /* LEDGridBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF280DF5C2A6C68D930E86FE /* LEDGridBackground.swift */; };
+		F24A1E75551BF62FF3879FE9 /* MediumWidgetBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B750719A7312E94E8FD44B /* MediumWidgetBoardView.swift */; };
+		F3147854BAC01259435816E0 /* BoardBezelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3738D5F10CD8415635986C6F /* BoardBezelView.swift */; };
+		F951FFAB8F9F523E84FCD68E /* LockScreenWidgetViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34735581334909DE165DEA73 /* LockScreenWidgetViews.swift */; };
+		FCB529B828E69D2F67AA3355 /* BoardTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CB201F3F7301E4F286852C /* BoardTheme.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E5A3D6BC0B65194237C56BBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA41454224EBA6F70140C8BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45C19C5BFCF0667E82B3C4EE;
+			remoteInfo = LondonArrivalsWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AF41018EEEF334620B2F7799 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C019CA69B6CF6AF676A81B71 /* LondonArrivalsWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		057B584018181128F65926FF /* TransportMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportMode.swift; sourceTree = "<group>"; };
+		12B750719A7312E94E8FD44B /* MediumWidgetBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidgetBoardView.swift; sourceTree = "<group>"; };
+		139C1B556E62C83A6764D988 /* LondonArrivalsWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = LondonArrivalsWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		22034E925EB0DEBDCA59966E /* WidgetGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetGalleryView.swift; sourceTree = "<group>"; };
+		2B6155EFB6ADA7C8127A53EA /* CommuteWidgetFlowProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommuteWidgetFlowProbe.swift; sourceTree = "<group>"; };
+		2EFDA242526E4B8C43AF6310 /* LiveBoardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveBoardDetailView.swift; sourceTree = "<group>"; };
+		34735581334909DE165DEA73 /* LockScreenWidgetViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreenWidgetViews.swift; sourceTree = "<group>"; };
+		34F84C61F240D2DF2550115C /* SmallWidgetBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidgetBoardView.swift; sourceTree = "<group>"; };
+		3620726C6CA02C7768E20169 /* AudioAnnouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioAnnouncer.swift; sourceTree = "<group>"; };
+		3738D5F10CD8415635986C6F /* BoardBezelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardBezelView.swift; sourceTree = "<group>"; };
+		3A7021F39D51BF4C0D406132 /* DotMatrixBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotMatrixBoardView.swift; sourceTree = "<group>"; };
+		418CCE428E00FF779F746176 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		4AEC8784ABE51ED70CC6195B /* LondonArrivals.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = LondonArrivals.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DA86946E1F296542717539B /* NetworkRailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRailService.swift; sourceTree = "<group>"; };
+		56FB78D54A7F2D4F8CCD9E1D /* ArrivalCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalCache.swift; sourceTree = "<group>"; };
+		60D0F1287B106D3594EF0AF2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		61786B864810518207F44013 /* CommutesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommutesListView.swift; sourceTree = "<group>"; };
+		64A9C0980CD869CBB206FAAC /* ArrivalPrediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalPrediction.swift; sourceTree = "<group>"; };
+		66CB201F3F7301E4F286852C /* BoardTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardTheme.swift; sourceTree = "<group>"; };
+		6B4ED39EE86BE2D3A499FC75 /* SelectCommuteIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCommuteIntent.swift; sourceTree = "<group>"; };
+		6D30EF6782EA14B912B60EB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6F1BE5D3DA975E3715E793B5 /* LondonArrivalsWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LondonArrivalsWidgetBundle.swift; sourceTree = "<group>"; };
+		7B3FD20E6B218CACC732E6D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7DD50E7F0B310A4CE20D8CAB /* CommuteStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommuteStorage.swift; sourceTree = "<group>"; };
+		832225157667A8A47C584863 /* TfLStopPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TfLStopPoint.swift; sourceTree = "<group>"; };
+		A090A9D87FAEFCF91F216774 /* LondonArrivalsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LondonArrivalsWidget.swift; sourceTree = "<group>"; };
+		A184539767D61D19892B7D78 /* CommuteWidgetTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommuteWidgetTimelineProvider.swift; sourceTree = "<group>"; };
+		A509F7084167C6C73B4E945D /* LineStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineStatusView.swift; sourceTree = "<group>"; };
+		AF280DF5C2A6C68D930E86FE /* LEDGridBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEDGridBackground.swift; sourceTree = "<group>"; };
+		B12B9FBC3FFEC51B69592432 /* AddCommuteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommuteView.swift; sourceTree = "<group>"; };
+		BFD123B2C35EB1AFB5149878 /* TfLLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TfLLine.swift; sourceTree = "<group>"; };
+		C3BCD0A936E5D9AD5C2DD12E /* StationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchView.swift; sourceTree = "<group>"; };
+		C60F530C1FFF3714BF870F06 /* LargeWidgetBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeWidgetBoardView.swift; sourceTree = "<group>"; };
+		DAE652723051C1FA4B303216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DC697EC5287DE923B282A97F /* FavouriteCommute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCommute.swift; sourceTree = "<group>"; };
+		E6F21F56F46BE40FB56609AD /* DotMatrixText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotMatrixText.swift; sourceTree = "<group>"; };
+		F89702F293F9FB213617059B /* LondonArrivalsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LondonArrivalsApp.swift; sourceTree = "<group>"; };
+		FD9CD30E84BD0398EF134ABB /* TfLService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TfLService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		11E08CFC2D281A8F877C483A /* WidgetViews */ = {
+			isa = PBXGroup;
+			children = (
+				C60F530C1FFF3714BF870F06 /* LargeWidgetBoardView.swift */,
+				34735581334909DE165DEA73 /* LockScreenWidgetViews.swift */,
+				12B750719A7312E94E8FD44B /* MediumWidgetBoardView.swift */,
+				34F84C61F240D2DF2550115C /* SmallWidgetBoardView.swift */,
+			);
+			path = WidgetViews;
+			sourceTree = "<group>";
+		};
+		1A9E0DA278F4AD52F77AD644 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3738D5F10CD8415635986C6F /* BoardBezelView.swift */,
+				3A7021F39D51BF4C0D406132 /* DotMatrixBoardView.swift */,
+				E6F21F56F46BE40FB56609AD /* DotMatrixText.swift */,
+				AF280DF5C2A6C68D930E86FE /* LEDGridBackground.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1B88E9A12616A7319FE13C0D /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2B6155EFB6ADA7C8127A53EA /* CommuteWidgetFlowProbe.swift */,
+			);
+			name = Tests;
+			path = LondonArrivals/Tests;
+			sourceTree = "<group>";
+		};
+		24DABA5A5490AAF553D16690 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D5F1F4C4E89D591E1DE005C2 /* Models */,
+				82D7E650BAE5238043383D10 /* Services */,
+				1A9E0DA278F4AD52F77AD644 /* Views */,
+				7A9DE97C990AABD932AE4AA1 /* Widgets */,
+				11E08CFC2D281A8F877C483A /* WidgetViews */,
+			);
+			name = Shared;
+			path = LondonArrivals/Shared;
+			sourceTree = "<group>";
+		};
+		4D26547296E9736724173E71 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7B3FD20E6B218CACC732E6D4 /* Assets.xcassets */,
+				60D0F1287B106D3594EF0AF2 /* ContentView.swift */,
+				6D30EF6782EA14B912B60EB1 /* Info.plist */,
+				F89702F293F9FB213617059B /* LondonArrivalsApp.swift */,
+				82AD24470781791FF514AA2A /* Views */,
+			);
+			name = App;
+			path = LondonArrivals/App;
+			sourceTree = "<group>";
+		};
+		64B8E47FF92F1878124CB737 /* LondonArrivalsWidget */ = {
+			isa = PBXGroup;
+			children = (
+				DAE652723051C1FA4B303216 /* Info.plist */,
+				A090A9D87FAEFCF91F216774 /* LondonArrivalsWidget.swift */,
+				6F1BE5D3DA975E3715E793B5 /* LondonArrivalsWidgetBundle.swift */,
+				6B4ED39EE86BE2D3A499FC75 /* SelectCommuteIntent.swift */,
+			);
+			path = LondonArrivalsWidget;
+			sourceTree = "<group>";
+		};
+		7A9DE97C990AABD932AE4AA1 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				A184539767D61D19892B7D78 /* CommuteWidgetTimelineProvider.swift */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		82AD24470781791FF514AA2A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B12B9FBC3FFEC51B69592432 /* AddCommuteView.swift */,
+				61786B864810518207F44013 /* CommutesListView.swift */,
+				A509F7084167C6C73B4E945D /* LineStatusView.swift */,
+				2EFDA242526E4B8C43AF6310 /* LiveBoardDetailView.swift */,
+				418CCE428E00FF779F746176 /* SettingsView.swift */,
+				C3BCD0A936E5D9AD5C2DD12E /* StationSearchView.swift */,
+				22034E925EB0DEBDCA59966E /* WidgetGalleryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		82D7E650BAE5238043383D10 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				56FB78D54A7F2D4F8CCD9E1D /* ArrivalCache.swift */,
+				3620726C6CA02C7768E20169 /* AudioAnnouncer.swift */,
+				7DD50E7F0B310A4CE20D8CAB /* CommuteStorage.swift */,
+				4DA86946E1F296542717539B /* NetworkRailService.swift */,
+				FD9CD30E84BD0398EF134ABB /* TfLService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		85F72D2AA186B5ADFB26D192 = {
+			isa = PBXGroup;
+			children = (
+				4D26547296E9736724173E71 /* App */,
+				64B8E47FF92F1878124CB737 /* LondonArrivalsWidget */,
+				24DABA5A5490AAF553D16690 /* Shared */,
+				1B88E9A12616A7319FE13C0D /* Tests */,
+				94AB052DEAE43C5FB27927D2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		94AB052DEAE43C5FB27927D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4AEC8784ABE51ED70CC6195B /* LondonArrivals.app */,
+				139C1B556E62C83A6764D988 /* LondonArrivalsWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D5F1F4C4E89D591E1DE005C2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				64A9C0980CD869CBB206FAAC /* ArrivalPrediction.swift */,
+				66CB201F3F7301E4F286852C /* BoardTheme.swift */,
+				DC697EC5287DE923B282A97F /* FavouriteCommute.swift */,
+				BFD123B2C35EB1AFB5149878 /* TfLLine.swift */,
+				832225157667A8A47C584863 /* TfLStopPoint.swift */,
+				057B584018181128F65926FF /* TransportMode.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		45C19C5BFCF0667E82B3C4EE /* LondonArrivalsWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A07AF88A6D0402FB4986980 /* Build configuration list for PBXNativeTarget "LondonArrivalsWidget" */;
+			buildPhases = (
+				6AEA91B667CAC45B11FB3DDA /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LondonArrivalsWidget;
+			packageProductDependencies = (
+			);
+			productName = LondonArrivalsWidget;
+			productReference = 139C1B556E62C83A6764D988 /* LondonArrivalsWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		9DC5DD0A1D2FBFEAFE30A1C6 /* LondonArrivals */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10CC1563B25238C81814DEC5 /* Build configuration list for PBXNativeTarget "LondonArrivals" */;
+			buildPhases = (
+				93C4C58BCB95524B8D0070D2 /* Sources */,
+				5E577897DFD8F5B766673575 /* Resources */,
+				AF41018EEEF334620B2F7799 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48326449F45AE68C78200E47 /* PBXTargetDependency */,
+			);
+			name = LondonArrivals;
+			packageProductDependencies = (
+			);
+			productName = LondonArrivals;
+			productReference = 4AEC8784ABE51ED70CC6195B /* LondonArrivals.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA41454224EBA6F70140C8BB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					45C19C5BFCF0667E82B3C4EE = {
+						DevelopmentTeam = 7L9YT2TMVS;
+						ProvisioningStyle = Automatic;
+					};
+					9DC5DD0A1D2FBFEAFE30A1C6 = {
+						DevelopmentTeam = 7L9YT2TMVS;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 37284ABA60A2CF1589EFA64C /* Build configuration list for PBXProject "LondonArrivals" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 85F72D2AA186B5ADFB26D192;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 94AB052DEAE43C5FB27927D2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9DC5DD0A1D2FBFEAFE30A1C6 /* LondonArrivals */,
+				45C19C5BFCF0667E82B3C4EE /* LondonArrivalsWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5E577897DFD8F5B766673575 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1D056C698EF2AC2C759299E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6AEA91B667CAC45B11FB3DDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3199AA76F3A3601A432194E5 /* ArrivalCache.swift in Sources */,
+				9AE237DEC442ED223E1499CC /* ArrivalPrediction.swift in Sources */,
+				A6E2294B191CD0BEF4B95F32 /* AudioAnnouncer.swift in Sources */,
+				466057F4B292AE0CFC4C8CB6 /* BoardBezelView.swift in Sources */,
+				FCB529B828E69D2F67AA3355 /* BoardTheme.swift in Sources */,
+				9FE45B1F9C3B28D29CA8C827 /* CommuteStorage.swift in Sources */,
+				D6582D84A050D652F888AE9E /* CommuteWidgetTimelineProvider.swift in Sources */,
+				EE034CF3C31525FDE51489C9 /* DotMatrixBoardView.swift in Sources */,
+				C687D45F668D4FA32CAE3A50 /* DotMatrixText.swift in Sources */,
+				6AC2612E804B1253B01DA6C9 /* FavouriteCommute.swift in Sources */,
+				F1F9BFFB323F0FEBFC412A59 /* LEDGridBackground.swift in Sources */,
+				ABDD7A250249BE51AA3ACF78 /* LargeWidgetBoardView.swift in Sources */,
+				F951FFAB8F9F523E84FCD68E /* LockScreenWidgetViews.swift in Sources */,
+				5632F12FD805BB32D3AFE969 /* LondonArrivalsWidget.swift in Sources */,
+				032EFD2D7C4E15F2E6B267B2 /* LondonArrivalsWidgetBundle.swift in Sources */,
+				E49F644C6DF4152206CC8BA4 /* MediumWidgetBoardView.swift in Sources */,
+				359FBE9AE7B110054B76B26B /* NetworkRailService.swift in Sources */,
+				3E0ADEB62286052CB5402E1B /* SelectCommuteIntent.swift in Sources */,
+				717AAE8AFBD8374692470C44 /* SmallWidgetBoardView.swift in Sources */,
+				5E160FE6A2AAE73BEA8778ED /* TfLLine.swift in Sources */,
+				27CA019C80873C2AF1CBB1C6 /* TfLService.swift in Sources */,
+				C52BFBA1065C18B5F0534561 /* TfLStopPoint.swift in Sources */,
+				5E05CC757688A1026CAAD08A /* TransportMode.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93C4C58BCB95524B8D0070D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C27F6750BDA6B8EEF7D1E0F7 /* AddCommuteView.swift in Sources */,
+				BBAA0949B549FF78C30DC584 /* ArrivalCache.swift in Sources */,
+				6AAB92198AF45D182934C0D5 /* ArrivalPrediction.swift in Sources */,
+				32A64C339A833D67DF9BE130 /* AudioAnnouncer.swift in Sources */,
+				F3147854BAC01259435816E0 /* BoardBezelView.swift in Sources */,
+				BAAE2C122D68A564C6DB71F5 /* BoardTheme.swift in Sources */,
+				56BBB465678415C0AD45832A /* CommuteStorage.swift in Sources */,
+				CDA89150674E95C7C7255A44 /* CommuteWidgetFlowProbe.swift in Sources */,
+				8E2F7646B5B6C67E7AC72A90 /* CommuteWidgetTimelineProvider.swift in Sources */,
+				8750FDBB369590C67DD931BD /* CommutesListView.swift in Sources */,
+				22BB91AC0D5C9C6CF473533C /* ContentView.swift in Sources */,
+				DC44A9C1DA260817DDF4BC57 /* DotMatrixBoardView.swift in Sources */,
+				0313DEABE21B670C7ACBA21A /* DotMatrixText.swift in Sources */,
+				AC2109BAF4111AC64B61CEBA /* FavouriteCommute.swift in Sources */,
+				A6E8EBB4F8C7641971555EEF /* LEDGridBackground.swift in Sources */,
+				B696E8E31084FEE2DC41E27C /* LargeWidgetBoardView.swift in Sources */,
+				0B978D7C0E2F4111D3F3C1C9 /* LineStatusView.swift in Sources */,
+				C6019E3235126F77FF26194A /* LiveBoardDetailView.swift in Sources */,
+				5A4117055E0E38BFD99A8237 /* LockScreenWidgetViews.swift in Sources */,
+				2223C826E8BF5384F580B7E1 /* LondonArrivalsApp.swift in Sources */,
+				F24A1E75551BF62FF3879FE9 /* MediumWidgetBoardView.swift in Sources */,
+				5E70CA2516205D9590D6709E /* NetworkRailService.swift in Sources */,
+				4A8A0F3229392EDFFE96048E /* SelectCommuteIntent.swift in Sources */,
+				0DFF69FF13CEF5DC7A548E0D /* SettingsView.swift in Sources */,
+				53DB0D0B266CB73C2931F729 /* SmallWidgetBoardView.swift in Sources */,
+				4E6578D67C2EC80DFA81884C /* StationSearchView.swift in Sources */,
+				460546DCE75CEF6202CF9D09 /* TfLLine.swift in Sources */,
+				700D54D8D0A5F94D24877C38 /* TfLService.swift in Sources */,
+				1E59E3A2C31380DFC982677B /* TfLStopPoint.swift in Sources */,
+				2F47D8B075682521A2AA4A33 /* TransportMode.swift in Sources */,
+				D5928F0C2C548E7037A9255C /* WidgetGalleryView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		48326449F45AE68C78200E47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45C19C5BFCF0667E82B3C4EE /* LondonArrivalsWidget */;
+			targetProxy = E5A3D6BC0B65194237C56BBF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		180C6A194998ABFE8D0508B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = LondonArrivalsWidget.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7L9YT2TMVS;
+				INFOPLIST_FILE = LondonArrivalsWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.antigravity.londonarrivals.widget;
+				PRODUCT_NAME = LondonArrivalsWidget;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A0B6D938BB4FB0196762A014 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7L9YT2TMVS;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		B90B741171C2ED70BD0C8637 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LondonArrivals.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7L9YT2TMVS;
+				INFOPLIST_FILE = LondonArrivals/App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.antigravity.londonarrivals;
+				PRODUCT_NAME = LondonArrivals;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) LA_WIDGET_FLOW_TEST";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BAB7F1EB5EFCA2AC27447878 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = LondonArrivalsWidget.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7L9YT2TMVS;
+				INFOPLIST_FILE = LondonArrivalsWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.antigravity.londonarrivals.widget;
+				PRODUCT_NAME = LondonArrivalsWidget;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C0466F3871EDA2431364C57A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LondonArrivals.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7L9YT2TMVS;
+				INFOPLIST_FILE = LondonArrivals/App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.antigravity.londonarrivals;
+				PRODUCT_NAME = LondonArrivals;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) LA_WIDGET_FLOW_TEST";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CBAF5885B0B9A4FE12BC1698 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 7L9YT2TMVS;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		10CC1563B25238C81814DEC5 /* Build configuration list for PBXNativeTarget "LondonArrivals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B90B741171C2ED70BD0C8637 /* Debug */,
+				C0466F3871EDA2431364C57A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		37284ABA60A2CF1589EFA64C /* Build configuration list for PBXProject "LondonArrivals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBAF5885B0B9A4FE12BC1698 /* Debug */,
+				A0B6D938BB4FB0196762A014 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4A07AF88A6D0402FB4986980 /* Build configuration list for PBXNativeTarget "LondonArrivalsWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				180C6A194998ABFE8D0508B3 /* Debug */,
+				BAB7F1EB5EFCA2AC27447878 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA41454224EBA6F70140C8BB /* Project object */;
+}
