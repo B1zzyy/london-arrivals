@@ -99,12 +99,16 @@ public final class TfLService: @unchecked Sendable {
             return []
         }
 
-        // If ID is a HUB, expand first to children
+        // Resolve a HUB to relevant rail children only. TfL hubs include bus
+        // stops too; querying every child wastes requests and invites 429s.
         var idsToQuery = [stopPointId]
         if stopPointId.hasPrefix("HUB") {
             let children = await fetchHubChildren(hubId: stopPointId)
-            if !children.isEmpty {
-                idsToQuery = children
+            let railChildren = children.filter { child in
+                child.hasPrefix("940GZZ") || child.hasPrefix("910G")
+            }
+            if !railChildren.isEmpty {
+                idsToQuery = railChildren
             }
         }
 

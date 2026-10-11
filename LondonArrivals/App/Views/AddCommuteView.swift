@@ -8,6 +8,7 @@ public struct AddCommuteView: View {
     @State private var selectedMode: TransportMode = .tube
     @State private var selectedLine: TfLLine = TfLLine.curatedLondonLines[1]
     @State private var hasSelectedLine = true
+    @State private var directionsRequestGeneration = 0
     @State private var selectedDirections: Set<String> = []
     @State private var availableDirections: [String] = []
     @State private var selectedTheme: BoardTheme = .undergroundAmber
@@ -37,6 +38,20 @@ public struct AddCommuteView: View {
 
     private var filteredLines: [TfLLine] {
         let stationLines = Set(originStation.lines.map { $0.lowercased() })
+        // TfL returns the line itself as the only service on DLR and Elizabeth
+        // stations; include that mode's canonical line even when stop-point
+        // metadata omits lineGroups (common for interchange hubs).
+        if selectedMode == .dlr, originStation.modes.contains(where: { $0.lowercased() == TransportMode.dlr.rawValue }) {
+            return TfLLine.curatedLondonLines.filter { $0.id == "dlr" }
+        }
+        if selectedMode == .elizabethLine, originStation.modes.contains(where: { $0.lowercased() == TransportMode.elizabethLine.rawValue }) {
+            return TfLLine.curatedLondonLines.filter { $0.id == "elizabeth" }
+        }
+        if selectedMode == .tube, originStation.id == "HUBBAN" {
+            return TfLLine.curatedLondonLines.filter {
+                ["central", "northern", "waterloo-city"].contains($0.id.lowercased())
+            }
+        }
         guard !stationLines.isEmpty else { return [] }
         return TfLLine.curatedLondonLines.filter {
             stationLines.contains($0.id.lowercased()) && $0.modeName == selectedMode.rawValue
@@ -93,12 +108,17 @@ public struct AddCommuteView: View {
                             Text(line.name).tag(line)
                         }
                     }
+                    .id("\(originStation.id)|\(selectedMode.rawValue)")
                     .disabled(filteredLines.isEmpty)
                     .onAppear {
                         NSLog("[LA-DIAG][AddCommute] line picker render station=%@ mode=%@ line=%@ choices=%@", originStation.id, selectedMode.rawValue, selectedLine.id, filteredLines.map(\.id).joined(separator: ","))
                     }
-                    .onChange(of: selectedLine) { _, _ in
-                        loadDirections()
+                    .onChange(of: selectedLine) { _, newLine in
+                        guard filteredLines.contains(newLine), newLine.modeName == selectedMode.rawValue else {
+                            NSLog("[LA-DIAG][AddCommute] picker selection ignored mode=%@ line=%@", selectedMode.rawValue, newLine.id)
+                            return
+                        }
+                        loadDirections(for: newLine, station: originStation)
                     }
 
                 }
@@ -193,8 +213,15 @@ public struct AddCommuteView: View {
                                         })
                                         let modeID = modeForStation?.rawValue ?? selectedMode.rawValue
                                         let stationLineIDs = Set(enrichedStation.lines.map { $0.lowercased() })
-                                        let matchingLines = TfLLine.curatedLondonLines.filter {
-                                            stationLineIDs.contains($0.id.lowercased()) && $0.modeName == modeID
+                                        let matchingLines: [TfLLine]
+                                        if modeID == TransportMode.dlr.rawValue, enrichedStation.modes.contains(where: { $0.lowercased() == modeID }) {
+                                            matchingLines = TfLLine.curatedLondonLines.filter { $0.id == "dlr" }
+                                        } else if modeID == TransportMode.elizabethLine.rawValue, enrichedStation.modes.contains(where: { $0.lowercased() == modeID }) {
+                                            matchingLines = TfLLine.curatedLondonLines.filter { $0.id == "elizabeth" }
+                                        } else {
+                                            matchingLines = TfLLine.curatedLondonLines.filter {
+                                                stationLineIDs.contains($0.id.lowercased()) && $0.modeName == modeID
+                                            }
                                         }
                                         let firstLine = matchingLines.first
                                         NSLog("[LA-DIAG][AddCommute] first selection resolved id=%@ mode=%@ lineChoices=%@ selected=%@", enrichedStation.id, modeID, matchingLines.map(\.id).joined(separator: ","), firstLine?.id ?? "none")
@@ -261,6 +288,7 @@ public struct AddCommuteView: View {
             selectedMode = firstMode
         }
         guard let firstLine = filteredLines.first else {
+            directionsRequestGeneration += 1
             hasSelectedLine = false
             NSLog("[LA-DIAG][AddCommute] no line options station=%@ mode=%@ stationLines=%@", originStation.id, selectedMode.rawValue, originStation.lines.joined(separator: ","))
             selectedDirections = []
@@ -270,10 +298,17 @@ public struct AddCommuteView: View {
         }
 
         let lineToSelect = filteredLines.contains(selectedLine) ? selectedLine : firstLine
+        let selectionChanged = selectedLine != lineToSelect
         hasSelectedLine = true
-        selectedLine = lineToSelect
-        NSLog("[LA-DIAG][AddCommute] update selection station=%@ mode=%@ line=%@", originStation.id, selectedMode.rawValue, lineToSelect.id)
-        loadDirections(for: lineToSelect, station: originStation)
+        selectedDirections = []
+        availableDirections = []
+        isLoadingOptions = selectionChanged
+        NSLog("[LA-DIAG][AddCommute] update selection station=%@ mode=%@ line=%@ changed=%@", originStation.id, selectedMode.rawValue, lineToSelect.id, selectionChanged ? "true" : "false")
+        if selectionChanged {
+            selectedLine = lineToSelect
+        } else {
+            loadDirections(for: lineToSelect, station: originStation)
+        }
     }
 
     private func loadDirections() {
@@ -288,8 +323,17 @@ public struct AddCommuteView: View {
             isLoadingOptions = false
             return
         }
+        let requestedMode = selectedMode.rawValue
+        guard filteredLines.contains(line), line.modeName == requestedMode else {
+            NSLog("[LA-DIAG][AddCommute] directions skipped invalid picker tag mode=%@ line=%@", requestedMode, line.id)
+            isLoadingOptions = false
+            return
+        }
+        directionsRequestGeneration += 1
+        let requestGeneration = directionsRequestGeneration
         isLoadingOptions = true
-        NSLog("[LA-DIAG][AddCommute] directions request station=%@ line=%@", station.id, line.id)
+        NSLog("[LA-DIAG][AddCommute] directions request station=%@ mode=%@ line=%@ generation=%ld", station.id, requestedMode, line.id, requestGeneration)
+        let requestID = "\(station.id)|\(requestedMode)|\(line.id)"
         Task { @MainActor in
             let arrivals = await TfLService.shared.fetchArrivalsForStopPoint(stopPointId: station.id, lineId: line.id)
             let options = Set(arrivals.compactMap { prediction -> String? in
@@ -298,8 +342,11 @@ public struct AddCommuteView: View {
                 let direction = towards.isEmpty ? destination : towards
                 return direction.isEmpty ? nil : direction
             }).sorted()
-            guard originStation.id == station.id, selectedLine.id == line.id else {
-                NSLog("[LA-DIAG][AddCommute] stale directions ignored station=%@ line=%@ currentStation=%@ currentLine=%@", station.id, line.id, originStation.id, selectedLine.id)
+            guard requestGeneration == directionsRequestGeneration,
+                  originStation.id == station.id,
+                  selectedLine.id == line.id,
+                  selectedMode.rawValue == requestedMode else {
+                NSLog("[LA-DIAG][AddCommute] stale directions ignored request=%@ currentStation=%@ currentLine=%@ currentMode=%@", requestID, originStation.id, selectedLine.id, selectedMode.rawValue)
                 return
             }
             availableDirections = options
