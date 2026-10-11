@@ -32,23 +32,23 @@ public struct TfLStopPoint: Identifiable, Codable, Equatable, Hashable {
     public static var popularLondonStations: [TfLStopPoint] {
         [
             // Tube stations
-            TfLStopPoint(id: "940GZZLUODS", commonName: "Old Street Underground Station", modes: ["tube"]),
-            TfLStopPoint(id: "940GZZLUMGT", commonName: "Moorgate Underground Station", modes: ["tube"]),
-            TfLStopPoint(id: "940GZZLUHBN", commonName: "Highbury & Islington Underground Station", modes: ["tube"]),
-            TfLStopPoint(id: "940GZZLUKSX", commonName: "King's Cross St. Pancras Underground Station", modes: ["tube"]),
-            TfLStopPoint(id: "940GZZLULNB", commonName: "London Bridge Underground Station", modes: ["tube"]),
-            TfLStopPoint(id: "940GZZLUBNK", commonName: "Bank Underground Station", modes: ["tube", "dlr"]),
-            TfLStopPoint(id: "940GZZLUWLO", commonName: "Waterloo Underground Station", modes: ["tube"]),
-            TfLStopPoint(id: "940GZZLUOXC", commonName: "Oxford Circus Underground Station", modes: ["tube"]),
-            TfLStopPoint(id: "940GZZLUVCT", commonName: "Victoria Underground Station", modes: ["tube"]),
-            TfLStopPoint(id: "940GZZLUFPK", commonName: "Finsbury Park Underground Station", modes: ["tube"]),
+            TfLStopPoint(id: "940GZZLUODS", commonName: "Old Street Underground Station", modes: ["tube"], lines: ["northern"]),
+            TfLStopPoint(id: "940GZZLUMGT", commonName: "Moorgate Underground Station", modes: ["tube"], lines: ["circle", "hammersmith-city", "metropolitan", "northern"]),
+            TfLStopPoint(id: "940GZZLUHBN", commonName: "Highbury & Islington Underground Station", modes: ["tube"], lines: ["victoria"]),
+            TfLStopPoint(id: "940GZZLUKSX", commonName: "King's Cross St. Pancras Underground Station", modes: ["tube"], lines: ["circle", "hammersmith-city", "metropolitan", "northern", "piccadilly", "victoria"]),
+            TfLStopPoint(id: "940GZZLULNB", commonName: "London Bridge Underground Station", modes: ["tube"], lines: ["jubilee", "northern"]),
+            TfLStopPoint(id: "940GZZLUBNK", commonName: "Bank Underground Station", modes: ["tube", "dlr"], lines: ["central", "dlr", "northern", "waterloo-city"]),
+            TfLStopPoint(id: "940GZZLUWLO", commonName: "Waterloo Underground Station", modes: ["tube"], lines: ["bakerloo", "jubilee", "northern", "waterloo-city"]),
+            TfLStopPoint(id: "940GZZLUOXC", commonName: "Oxford Circus Underground Station", modes: ["tube"], lines: ["bakerloo", "central", "victoria"]),
+            TfLStopPoint(id: "940GZZLUVCT", commonName: "Victoria Underground Station", modes: ["tube"], lines: ["district", "victoria", "circle"]),
+            TfLStopPoint(id: "940GZZLUFPK", commonName: "Finsbury Park Underground Station", modes: ["tube"], lines: ["piccadilly", "victoria"]),
             
             // Elizabeth line & major interchanges
             TfLStopPoint(id: "910GPIMLICO", commonName: "London Paddington", modes: ["national-rail", "elizabeth-line"]),
             TfLStopPoint(id: "910GSTFD", commonName: "Stratford Rail Station", modes: ["national-rail", "elizabeth-line", "overground", "dlr"]),
             
             // Overground stations
-            TfLStopPoint(id: "910GHGHI", commonName: "Highbury & Islington Rail Station", modes: ["national-rail", "overground"])
+            TfLStopPoint(id: "910GHGHI", commonName: "Highbury & Islington Rail Station", modes: ["national-rail", "overground"], lines: ["mildmay", "windrush", "weaver"])
         ]
     }
 }

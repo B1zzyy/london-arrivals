@@ -45,18 +45,24 @@ public final class TfLService: @unchecked Sendable {
             results.append(contentsOf: lineArrivals)
         }
 
-        // Older saved favourites can contain display labels rather than the exact
-        // TfL `towards` string. Apply a direction filter only when it matches data;
-        // otherwise keep real station/line arrivals rather than turning them into [] .
+        // The Add Commute picker uses `towards` when TfL provides it and otherwise
+        // uses `destinationName`. Match both fields so the saved choice is applied
+        // consistently for every TfL mode and line.
         let directions = (commute.directionFilters ?? commute.directionFilter.map { [$0] } ?? [])
             .map { $0.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() }
             .filter { !$0.isEmpty }
         if !directions.isEmpty {
-            let matchingDirections = results.filter { prediction in
-                let towards = (prediction.towards ?? "").trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
-                return directions.contains { towards == $0 || towards.contains($0) || $0.contains(towards) }
+            results = results.filter { prediction in
+                let directionValues = [prediction.towards, prediction.destinationName]
+                    .compactMap { $0?.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() }
+                    .filter { !$0.isEmpty }
+                return directions.contains { selected in
+                    directionValues.contains { value in
+                        value == selected || value.contains(selected) || selected.contains(value)
+                    }
+                }
             }
-            if !matchingDirections.isEmpty { results = matchingDirections }
+            NSLog("[LA-DIAG][TfL] destination-filter commute=%@ selected=%@ matched=%ld", commute.id.uuidString, directions.joined(separator: "|"), results.count)
         }
 
         // Treat legacy destination/platform values as preferences, not reasons to
@@ -131,17 +137,14 @@ public final class TfLService: @unchecked Sendable {
             }
         }
 
-        if let line = lineId, !line.isEmpty {
-            let lineLower = line.lowercased().replacingOccurrences(of: " ", with: "-")
-            let matchingLine = accumulated.filter {
-                $0.lineId.lowercased() == lineLower ||
-                $0.lineName.lowercased().contains(lineLower) ||
-                lineLower.contains($0.lineId.lowercased())
-            }
-            if !matchingLine.isEmpty { return matchingLine }
+        guard let line = lineId, !line.isEmpty else { return accumulated }
+        let requestedLine = normalizedLineIdentifier(line)
+        let matchingLine = accumulated.filter {
+            normalizedLineIdentifier($0.lineId) == requestedLine ||
+            normalizedLineIdentifier($0.lineName) == requestedLine
         }
-
-        return accumulated
+        NSLog("[LA-DIAG][TfL] line-filter station=%@ requested=%@ total=%ld matched=%ld", stopPointId, requestedLine, accumulated.count, matchingLine.count)
+        return matchingLine
     }
 
     // MARK: - Line Arrivals
@@ -202,22 +205,86 @@ public final class TfLService: @unchecked Sendable {
     }
 
     // MARK: - Search Stations
+    public func enrichStopPoint(_ stopPoint: TfLStopPoint) async -> TfLStopPoint {
+        guard var components = URLComponents(string: "\(baseURL)/StopPoint/\(stopPoint.id)") else { return stopPoint }
+        appendAuth(to: &components)
+        guard let url = components.url else { return stopPoint }
+
+        for attempt in 0...2 {
+            do {
+                let (data, response) = try await session.data(from: url)
+                guard let http = response as? HTTPURLResponse else { return stopPoint }
+                guard (200...299).contains(http.statusCode) else {
+                    NSLog("[LA-DIAG][TfL] station-enrichment HTTP status=%ld id=%@ attempt=%ld", http.statusCode, stopPoint.id, attempt + 1)
+                    if http.statusCode == 429, attempt < 2 {
+                        try? await Task.sleep(for: .milliseconds(500 * (attempt + 1)))
+                        continue
+                    }
+                    return stopPoint
+                }
+                guard let detail = try JSONSerialization.jsonObject(with: data) as? [String: Any] else { return stopPoint }
+                let modes = (detail["modes"] as? [String]) ?? stopPoint.modes
+                var lineIDs = Set<String>()
+                if let groups = detail["lineModeGroups"] as? [[String: Any]] {
+                    for group in groups {
+                        guard let mode = group["modeName"] as? String,
+                              let identifiers = group["lineIdentifier"] as? [String] else { continue }
+                        if ["tube", "elizabeth-line", "overground", "dlr"].contains(mode.lowercased()) {
+                            lineIDs.formUnion(identifiers.map { $0.lowercased() })
+                        }
+                    }
+                }
+                if lineIDs.isEmpty {
+                    lineIDs.formUnion(stopPoint.lines.map { $0.lowercased() })
+                    NSLog("[LA-DIAG][TfL] station-enrichment using supplied line fallback id=%@ lines=%@", stopPoint.id, lineIDs.sorted().joined(separator: ","))
+                }
+                return TfLStopPoint(
+                    id: stopPoint.id,
+                    commonName: (detail["commonName"] as? String) ?? stopPoint.commonName,
+                    modes: modes,
+                    lines: lineIDs.sorted(),
+                    lat: (detail["lat"] as? Double) ?? stopPoint.lat,
+                    lon: (detail["lon"] as? Double) ?? stopPoint.lon
+                )
+            } catch {
+                NSLog("[LA-DIAG][TfL] station-enrichment failed id=%@ attempt=%ld error=%@", stopPoint.id, attempt + 1, String(describing: error))
+                if attempt < 2 {
+                    try? await Task.sleep(for: .milliseconds(350 * (attempt + 1)))
+                }
+            }
+        }
+        return stopPoint
+    }
+
     public func searchStations(query: String) async -> [TfLStopPoint] {
         let trimmed = query.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmed.isEmpty else { return TfLStopPoint.popularLondonStations }
+        guard trimmed.count >= 3 else { return [] }
 
-        let encoded = trimmed.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? trimmed
+        var pathAllowed = CharacterSet.urlPathAllowed
+        pathAllowed.remove(charactersIn: "/?#%")
+        let encoded = trimmed.addingPercentEncoding(withAllowedCharacters: pathAllowed) ?? trimmed
         guard var comps = URLComponents(string: "\(baseURL)/StopPoint/Search/\(encoded)") else {
-            return TfLStopPoint.popularLondonStations
+            return []
         }
         comps.queryItems = [
             URLQueryItem(name: "modes", value: "tube,national-rail,elizabeth-line,overground,dlr")
         ]
         appendAuth(to: &comps)
-        guard let url = comps.url else { return TfLStopPoint.popularLondonStations }
+        guard let url = comps.url else { return [] }
 
         do {
-            let (data, _) = try await session.data(from: url)
+            let (data, response) = try await session.data(from: url)
+            guard let http = response as? HTTPURLResponse, (200...299).contains(http.statusCode) else {
+                NSLog("[LA-DIAG][TfL] station-search HTTP status=%ld query=%@", (response as? HTTPURLResponse)?.statusCode ?? -1, trimmed)
+                if (response as? HTTPURLResponse)?.statusCode == 429 {
+                    let fallback = TfLStopPoint.popularLondonStations.filter {
+                        $0.commonName.localizedCaseInsensitiveContains(trimmed)
+                    }
+                    if !fallback.isEmpty { return fallback }
+                }
+                return []
+            }
             if let dict = try JSONSerialization.jsonObject(with: data) as? [String: Any],
                let matches = dict["matches"] as? [[String: Any]] {
                 var results: [TfLStopPoint] = []
@@ -225,21 +292,22 @@ public final class TfLService: @unchecked Sendable {
                     guard let id = match["id"] as? String,
                           let name = match["name"] as? String else { continue }
                     let modes = (match["modes"] as? [String]) ?? []
+                    let lines = ((match["lineIds"] as? [String]) ?? (match["lines"] as? [String]) ?? [])
+                        .map { $0.lowercased() }
                     let lat = match["lat"] as? Double
                     let lon = match["lon"] as? Double
-                    results.append(TfLStopPoint(id: id, commonName: name, modes: modes, lines: [], lat: lat, lon: lon))
+                    let candidate = TfLStopPoint(id: id, commonName: name, modes: modes, lines: lines, lat: lat, lon: lon)
+                    results.append(await enrichStopPoint(candidate))
                 }
                 if !results.isEmpty {
                     return results
                 }
             }
         } catch {
-            // Return filtered popular stations on error
+            NSLog("[LA-DIAG][TfL] station-search failed query=%@ error=%@", trimmed, String(describing: error))
         }
 
-        return TfLStopPoint.popularLondonStations.filter {
-            $0.commonName.localizedCaseInsensitiveContains(trimmed)
-        }
+        return []
     }
 
     // MARK: - Line Status
@@ -280,6 +348,13 @@ public final class TfLService: @unchecked Sendable {
         } catch {
             return []
         }
+    }
+
+    private func normalizedLineIdentifier(_ value: String) -> String {
+        value.lowercased()
+            .replacingOccurrences(of: " line", with: "")
+            .replacingOccurrences(of: "&", with: "and")
+            .filter { $0.isLetter || $0.isNumber }
     }
 
     // MARK: - JSON Parser

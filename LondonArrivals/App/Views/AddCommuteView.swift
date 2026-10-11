@@ -7,6 +7,7 @@ public struct AddCommuteView: View {
     @State private var originStation: TfLStopPoint = TfLStopPoint.popularLondonStations[0]
     @State private var selectedMode: TransportMode = .tube
     @State private var selectedLine: TfLLine = TfLLine.curatedLondonLines[1]
+    @State private var hasSelectedLine = true
     @State private var selectedDirections: Set<String> = []
     @State private var availableDirections: [String] = []
     @State private var selectedTheme: BoardTheme = .undergroundAmber
@@ -15,16 +16,31 @@ public struct AddCommuteView: View {
     @State private var isSearchingStations = false
     @State private var isLoadingOptions = false
     @State private var showStationPicker = false
+    @State private var isSelectingStation = false
+    @State private var stationSearchTask: Task<Void, Never>?
+    @State private var stationSearchGeneration = 0
 
     public init(storage: CommuteStorage = CommuteStorage.shared) {
         self.storage = storage
     }
 
+    private var stationsToDisplay: [TfLStopPoint] {
+        stationSearchText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+            ? TfLStopPoint.popularLondonStations
+            : searchResults
+    }
+
+    private var availableModes: [TransportMode] {
+        let stationModes = Set(originStation.modes.map { $0.lowercased() })
+        return TransportMode.allCases.filter { stationModes.contains($0.rawValue.lowercased()) }
+    }
+
     private var filteredLines: [TfLLine] {
         let stationLines = Set(originStation.lines.map { $0.lowercased() })
-        let atStation = TfLLine.curatedLondonLines.filter { stationLines.contains($0.id.lowercased()) }
-        let byMode = TfLLine.curatedLondonLines.filter { $0.modeName == selectedMode.rawValue }
-        return atStation.isEmpty ? byMode : atStation.filter { $0.modeName == selectedMode.rawValue }
+        guard !stationLines.isEmpty else { return [] }
+        return TfLLine.curatedLondonLines.filter {
+            stationLines.contains($0.id.lowercased()) && $0.modeName == selectedMode.rawValue
+        }
     }
 
     private var previewCommute: FavouriteCommute {
@@ -64,7 +80,7 @@ public struct AddCommuteView: View {
 
                 Section("2. Choose transport and line") {
                     Picker("Transport", selection: $selectedMode) {
-                        ForEach(TransportMode.allCases) { mode in
+                        ForEach(availableModes) { mode in
                             Text(mode.displayName).tag(mode)
                         }
                     }
@@ -76,6 +92,10 @@ public struct AddCommuteView: View {
                         ForEach(filteredLines) { line in
                             Text(line.name).tag(line)
                         }
+                    }
+                    .disabled(filteredLines.isEmpty)
+                    .onAppear {
+                        NSLog("[LA-DIAG][AddCommute] line picker render station=%@ mode=%@ line=%@ choices=%@", originStation.id, selectedMode.rawValue, selectedLine.id, filteredLines.map(\.id).joined(separator: ","))
                     }
                     .onChange(of: selectedLine) { _, _ in
                         loadDirections()
@@ -145,7 +165,7 @@ public struct AddCommuteView: View {
                         saveCommute()
                         dismiss()
                     }
-                    .disabled(filteredLines.isEmpty || selectedDirections.isEmpty || isLoadingOptions)
+                    .disabled(filteredLines.isEmpty || !hasSelectedLine || selectedDirections.isEmpty || isLoadingOptions)
                 }
             }
             .sheet(isPresented: $showStationPicker) {
@@ -154,11 +174,55 @@ public struct AddCommuteView: View {
                         if isSearchingStations {
                             HStack { Spacer(); ProgressView("Searching stations…"); Spacer() }
                         } else {
-                            ForEach(searchResults.isEmpty ? TfLStopPoint.popularLondonStations : searchResults) { station in
+                            ForEach(
+                                stationSearchText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+                                    ? TfLStopPoint.popularLondonStations
+                                    : searchResults
+                            ) { station in
                                 Button {
-                                    originStation = station
-                                    showStationPicker = false
-                                    updateLineSelection()
+                                    guard !isSelectingStation else { return }
+                                    NSLog("[LA-DIAG][AddCommute] station tap id=%@ name=%@", station.id, station.commonName)
+                                    isSelectingStation = true
+                                    Task { @MainActor in
+                                        NSLog("[LA-DIAG][AddCommute] enrichment begin id=%@", station.id)
+                                        let enrichedStation = await TfLService.shared.enrichStopPoint(station)
+                                        NSLog("[LA-DIAG][AddCommute] enrichment end id=%@ modes=%@ lines=%@", enrichedStation.id, enrichedStation.modes.joined(separator: ","), enrichedStation.lines.joined(separator: ","))
+
+                                        let modeForStation = TransportMode.allCases.first(where: { mode in
+                                            enrichedStation.modes.contains { $0.lowercased() == mode.rawValue.lowercased() }
+                                        })
+                                        let modeID = modeForStation?.rawValue ?? selectedMode.rawValue
+                                        let stationLineIDs = Set(enrichedStation.lines.map { $0.lowercased() })
+                                        let matchingLines = TfLLine.curatedLondonLines.filter {
+                                            stationLineIDs.contains($0.id.lowercased()) && $0.modeName == modeID
+                                        }
+                                        let firstLine = matchingLines.first
+                                        NSLog("[LA-DIAG][AddCommute] first selection resolved id=%@ mode=%@ lineChoices=%@ selected=%@", enrichedStation.id, modeID, matchingLines.map(\.id).joined(separator: ","), firstLine?.id ?? "none")
+
+                                        originStation = enrichedStation
+                                        hasSelectedLine = firstLine != nil
+                                        if let firstLine {
+                                            selectedLine = firstLine
+                                        }
+                                        stationSearchText = ""
+                                        searchResults = []
+                                        selectedDirections = []
+                                        availableDirections = []
+
+                                        if let modeForStation {
+                                            selectedMode = modeForStation
+                                        }
+
+                                        if let firstLine {
+                                            NSLog("[LA-DIAG][AddCommute] selection committed station=%@ mode=%@ line=%@", enrichedStation.id, modeID, firstLine.id)
+                                            loadDirections(for: firstLine, station: enrichedStation)
+                                        } else {
+                                            NSLog("[LA-DIAG][AddCommute] no curated line match station=%@ mode=%@ lineIDs=%@", enrichedStation.id, modeID, enrichedStation.lines.joined(separator: ","))
+                                            updateLineSelection()
+                                        }
+                                        isSelectingStation = false
+                                        showStationPicker = false
+                                    }
                                 } label: {
                                     VStack(alignment: .leading, spacing: 3) {
                                         Text(station.cleanName).foregroundStyle(.primary)
@@ -169,7 +233,14 @@ public struct AddCommuteView: View {
                         }
                     }
                     .searchable(text: $stationSearchText, prompt: "Search a TfL station")
-                    .onChange(of: stationSearchText) { _, query in performStationSearch(query: query) }
+                    .onChange(of: stationSearchText) { _, query in scheduleStationSearch(query: query) }
+                    .overlay {
+                        if isSelectingStation {
+                            ProgressView("Loading station…")
+                                .padding()
+                                .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 12))
+                        }
+                    }
                     .navigationTitle("Select Station")
                     .toolbar {
                         ToolbarItem(placement: .cancellationAction) {
@@ -179,48 +250,84 @@ public struct AddCommuteView: View {
                 }
             }
             .onAppear { updateLineSelection() }
+            .onChange(of: originStation) { _, newStation in
+                NSLog("[LA-DIAG][AddCommute] originStation onChange id=%@", newStation.id)
+            }
         }
     }
 
     private func updateLineSelection() {
-        if !filteredLines.contains(selectedLine), let first = filteredLines.first {
-            selectedLine = first
+        if let firstMode = availableModes.first, !availableModes.contains(selectedMode) {
+            selectedMode = firstMode
         }
-        loadDirections()
+        guard let firstLine = filteredLines.first else {
+            hasSelectedLine = false
+            NSLog("[LA-DIAG][AddCommute] no line options station=%@ mode=%@ stationLines=%@", originStation.id, selectedMode.rawValue, originStation.lines.joined(separator: ","))
+            selectedDirections = []
+            availableDirections = []
+            isLoadingOptions = false
+            return
+        }
+
+        let lineToSelect = filteredLines.contains(selectedLine) ? selectedLine : firstLine
+        hasSelectedLine = true
+        selectedLine = lineToSelect
+        NSLog("[LA-DIAG][AddCommute] update selection station=%@ mode=%@ line=%@", originStation.id, selectedMode.rawValue, lineToSelect.id)
+        loadDirections(for: lineToSelect, station: originStation)
     }
 
     private func loadDirections() {
+        loadDirections(for: selectedLine, station: originStation)
+    }
+
+    private func loadDirections(for line: TfLLine, station: TfLStopPoint) {
         selectedDirections = []
         availableDirections = []
-        guard !originStation.id.isEmpty, !selectedLine.id.isEmpty else { return }
+        guard !station.id.isEmpty, !line.id.isEmpty else {
+            NSLog("[LA-DIAG][AddCommute] directions skipped empty station/line")
+            isLoadingOptions = false
+            return
+        }
         isLoadingOptions = true
-        Task {
-            let arrivals = await TfLService.shared.fetchArrivalsForStopPoint(stopPointId: originStation.id, lineId: selectedLine.id)
+        NSLog("[LA-DIAG][AddCommute] directions request station=%@ line=%@", station.id, line.id)
+        Task { @MainActor in
+            let arrivals = await TfLService.shared.fetchArrivalsForStopPoint(stopPointId: station.id, lineId: line.id)
             let options = Set(arrivals.compactMap { prediction -> String? in
-                let direction = prediction.towards?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+                let towards = prediction.towards?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+                let destination = prediction.destinationName.trimmingCharacters(in: .whitespacesAndNewlines)
+                let direction = towards.isEmpty ? destination : towards
                 return direction.isEmpty ? nil : direction
             }).sorted()
-            await MainActor.run {
-                availableDirections = options
-                selectedDirections = Set(selectedDirections.intersection(options))
-                if selectedDirections.isEmpty, let first = options.first { selectedDirections.insert(first) }
-                isLoadingOptions = false
+            guard originStation.id == station.id, selectedLine.id == line.id else {
+                NSLog("[LA-DIAG][AddCommute] stale directions ignored station=%@ line=%@ currentStation=%@ currentLine=%@", station.id, line.id, originStation.id, selectedLine.id)
+                return
             }
+            availableDirections = options
+            selectedDirections = options.first.map { [$0] } ?? []
+            isLoadingOptions = false
+            NSLog("[LA-DIAG][AddCommute] directions complete station=%@ line=%@ arrivals=%ld options=%ld", station.id, line.id, arrivals.count, options.count)
         }
     }
 
-    private func performStationSearch(query: String) {
-        guard !query.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+    private func scheduleStationSearch(query: String) {
+        stationSearchGeneration += 1
+        let generation = stationSearchGeneration
+        stationSearchTask?.cancel()
+        let trimmed = query.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else {
             searchResults = []
+            isSearchingStations = false
             return
         }
         isSearchingStations = true
-        Task {
-            let results = await TfLService.shared.searchStations(query: query)
-            await MainActor.run {
-                searchResults = results
-                isSearchingStations = false
-            }
+        stationSearchTask = Task { @MainActor in
+            try? await Task.sleep(for: .milliseconds(500))
+            guard !Task.isCancelled, generation == stationSearchGeneration else { return }
+            let results = await TfLService.shared.searchStations(query: trimmed)
+            guard !Task.isCancelled, generation == stationSearchGeneration else { return }
+            searchResults = results
+            isSearchingStations = false
+            NSLog("[LA-DIAG][AddCommute] search complete query=%@ resultCount=%ld", trimmed, results.count)
         }
     }
 
