@@ -264,10 +264,17 @@ public struct AddCommuteView: View {
                                         showStationPicker = false
                                     }
                                     } label: {
-                                            VStack(alignment: .leading, spacing: 3) {
-                                                Text(station.cleanName).foregroundStyle(.primary)
-                                                Text(station.modes.joined(separator: ", ")).font(.caption).foregroundStyle(.secondary)
+                                        HStack(spacing: 10) {
+                                            Text(station.cleanName)
+                                                .foregroundStyle(.primary)
+                                            Spacer(minLength: 8)
+                                            HStack(spacing: 5) {
+                                                ForEach(stationTransportModes(station), id: \.self) { mode in
+                                                    TransportModeRoundel(mode: mode)
+                                                }
                                             }
+                                        }
+                                        .contentShape(Rectangle())
                                     }
                                 }
                             }
@@ -295,6 +302,15 @@ public struct AddCommuteView: View {
                 NSLog("[LA-DIAG][AddCommute] originStation onChange id=%@", newStation.id)
             }
         }
+    }
+
+    private func stationTransportModes(_ station: TfLStopPoint) -> [TransportMode] {
+        var modes: [TransportMode] = []
+        for rawMode in station.modes {
+            guard let mode = TransportMode(rawValue: rawMode.lowercased()), !modes.contains(mode) else { continue }
+            modes.append(mode)
+        }
+        return modes
     }
 
     private func updateLineSelection() {

@@ -38,10 +38,10 @@ public enum TransportMode: String, CaseIterable, Codable, Identifiable {
 
     public var brandColor: Color {
         switch self {
-        case .tube: return Color(red: 0.0, green: 0.1, blue: 0.7) // Classic Underground Blue
-        case .elizabethLine: return Color(red: 0.45, green: 0.25, blue: 0.65) // Elizabeth Purple
-        case .overground: return Color(red: 0.93, green: 0.45, blue: 0.05) // Overground Orange
-        case .dlr: return Color(red: 0.0, green: 0.67, blue: 0.67) // DLR Teal
+        case .tube: return Color(red: 0.89, green: 0.13, blue: 0.10) // #e32019
+        case .elizabethLine: return Color(red: 0.47, green: 0.24, blue: 0.74) // #773ebc
+        case .overground: return Color(red: 0.93, green: 0.49, blue: 0.07) // #ee7d12
+        case .dlr: return Color(red: 0.0, green: 0.64, blue: 0.67) // #00a3aa
         }
     }
 }

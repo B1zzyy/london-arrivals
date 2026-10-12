@@ -50,6 +50,7 @@
 		BBAA0949B549FF78C30DC584 /* ArrivalCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FB78D54A7F2D4F8CCD9E1D /* ArrivalCache.swift */; };
 		C019CA69B6CF6AF676A81B71 /* LondonArrivalsWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 139C1B556E62C83A6764D988 /* LondonArrivalsWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C27F6750BDA6B8EEF7D1E0F7 /* AddCommuteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12B9FBC3FFEC51B69592432 /* AddCommuteView.swift */; };
+		C9F010A5B3D14CE090CBDBA1 /* TransportModeRoundel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F010A5B3D14CE090CBDBA1 /* TransportModeRoundel.swift */; };
 		C52BFBA1065C18B5F0534561 /* TfLStopPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832225157667A8A47C584863 /* TfLStopPoint.swift */; };
 		C6019E3235126F77FF26194A /* LiveBoardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFDA242526E4B8C43AF6310 /* LiveBoardDetailView.swift */; };
 		C687D45F668D4FA32CAE3A50 /* DotMatrixText.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F21F56F46BE40FB56609AD /* DotMatrixText.swift */; };
@@ -92,6 +93,7 @@
 
 /* Begin PBXFileReference section */
 		057B584018181128F65926FF /* TransportMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportMode.swift; sourceTree = "<group>"; };
+		C8F010A5B3D14CE090CBDBA1 /* TransportModeRoundel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportModeRoundel.swift; sourceTree = "<group>"; };
 		12B750719A7312E94E8FD44B /* MediumWidgetBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidgetBoardView.swift; sourceTree = "<group>"; };
 		139C1B556E62C83A6764D988 /* LondonArrivalsWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = LondonArrivalsWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		22034E925EB0DEBDCA59966E /* WidgetGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetGalleryView.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				B12B9FBC3FFEC51B69592432 /* AddCommuteView.swift */,
+				C8F010A5B3D14CE090CBDBA1 /* TransportModeRoundel.swift */,
 				61786B864810518207F44013 /* CommutesListView.swift */,
 				A509F7084167C6C73B4E945D /* LineStatusView.swift */,
 				2EFDA242526E4B8C43AF6310 /* LiveBoardDetailView.swift */,
@@ -396,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C27F6750BDA6B8EEF7D1E0F7 /* AddCommuteView.swift in Sources */,
+				C9F010A5B3D14CE090CBDBA1 /* TransportModeRoundel.swift in Sources */,
 				BBAA0949B549FF78C30DC584 /* ArrivalCache.swift in Sources */,
 				6AAB92198AF45D182934C0D5 /* ArrivalPrediction.swift in Sources */,
 				32A64C339A833D67DF9BE130 /* AudioAnnouncer.swift in Sources */,
