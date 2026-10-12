@@ -69,9 +69,28 @@ struct CommuteRowCard: View {
 
     var body: some View {
         let destinationText = commute.destinationFilter ?? commute.directionFilters?.joined(separator: ", ") ?? commute.directionFilter ?? "Any"
+        let lineColor = TfLLine(id: commute.lineId, name: commute.lineName, modeName: commute.mode.rawValue).lineColor
 
         Button(action: onSelect) {
-            HStack(spacing: 0) {
+            ZStack(alignment: .trailing) {
+                // Main card content background
+                Color(.secondarySystemBackground)
+
+                // Vertically oriented line name placed gracefully inside the card on the right
+                HStack(spacing: 4) {
+                    Spacer()
+
+                    Text(commute.lineName)
+                        .font(.system(size: 9, weight: .bold))
+                        .foregroundColor(.secondary)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
+                        .rotationEffect(.degrees(-90))
+                        .frame(width: 60, height: 20)
+                        .padding(.trailing, 2)
+                }
+
+                // Card details layout
                 VStack(alignment: .leading, spacing: 6) {
                     HStack(spacing: 8) {
                         TransportModeRoundel(mode: commute.mode)
@@ -82,7 +101,7 @@ struct CommuteRowCard: View {
                             .font(.headline)
                             .foregroundColor(.primary)
 
-                        Spacer()
+                        Spacer(minLength: 50)
                     }
 
                     HStack(spacing: 4) {
@@ -96,26 +115,15 @@ struct CommuteRowCard: View {
                     .padding(.leading, 34)
                 }
                 .padding(14)
+                .padding(.trailing, 28) // Make room for the vertical line name
 
-                Spacer(minLength: 8)
-
-                // Vertical accent strip with vertically oriented line name touching the accent color using official line color
-                HStack(spacing: -12) {
-                    Text(commute.lineName)
-                        .font(.system(size: 9, weight: .bold))
-                        .foregroundColor(.secondary)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.5)
-                        .rotationEffect(.degrees(-90))
-                        .frame(width: 60, height: 20)
-
-                    TfLLine(id: commute.lineId, name: commute.lineName, modeName: commute.mode.rawValue)
-                        .lineColor
-                        .frame(width: 5)
-                        .clipShape(UnevenRoundedRectangle(topLeadingRadius: 0, bottomLeadingRadius: 0, bottomTrailingRadius: 14, topTrailingRadius: 14))
+                // Right-edge integrated color accent strip sharing the card's outer rounded corners perfectly
+                HStack {
+                    Spacer()
+                    lineColor
+                        .frame(width: 6)
                 }
             }
-            .background(Color(.secondarySystemBackground))
             .clipShape(RoundedRectangle(cornerRadius: 14))
         }
         .buttonStyle(.plain)
