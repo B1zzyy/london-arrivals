@@ -18,26 +18,25 @@ public struct TfLLine: Identifiable, Codable, Equatable, Hashable {
     /// Color representing the line according to official TfL and National Rail brand guides
     public var lineColor: Color {
         switch id.lowercased() {
-        // Tube lines
-        case "bakerloo": return Color(red: 0.70, green: 0.40, blue: 0.13)
-        case "central": return Color(red: 0.89, green: 0.15, blue: 0.13)
-        case "circle": return Color(red: 1.00, green: 0.82, blue: 0.00)
-        case "district": return Color(red: 0.00, green: 0.49, blue: 0.24)
-        case "hammersmith-city": return Color(red: 0.96, green: 0.59, blue: 0.66)
-        case "jubilee": return Color(red: 0.53, green: 0.56, blue: 0.60)
-        case "metropolitan": return Color(red: 0.52, green: 0.10, blue: 0.35)
-        case "northern": return Color(red: 0.10, green: 0.10, blue: 0.10)
-        case "piccadilly": return Color(red: 0.00, green: 0.10, blue: 0.63)
-        case "victoria": return Color(red: 0.00, green: 0.63, blue: 0.89)
-        case "waterloo-city": return Color(red: 0.47, green: 0.80, blue: 0.72)
-        // Elizabeth line & DLR
-        case "elizabeth": return Color(red: 0.42, green: 0.22, blue: 0.62)
+        // Tube lines (with custom hexes)
+        case "bakerloo": return Color(red: 137.0/255.0, green: 78.0/255.0, blue: 36.0/255.0)
+        case "central": return Color(red: 220.0/255.0, green: 36.0/255.0, blue: 31.0/255.0)
+        case "circle": return Color(red: 255.0/255.0, green: 206.0/255.0, blue: 0.0/255.0)
+        case "district": return Color(red: 0.0/255.0, green: 114.0/255.0, blue: 41.0/255.0)
+        case "hammersmith-city", "hammersmith & city": return Color(red: 215.0/255.0, green: 153.0/255.0, blue: 175.0/255.0)
+        case "jubilee": return Color(red: 134.0/255.0, green: 143.0/255.0, blue: 152.0/255.0)
+        case "metropolitan", "metropolitian": return Color(red: 117.0/255.0, green: 16.0/255.0, blue: 86.0/255.0)
+        case "northern": return Color(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0)
+        case "piccadilly": return Color(red: 0.0/255.0, green: 25.0/255.0, blue: 168.0/255.0)
+        case "victoria", "victroia": return Color(red: 0.0/255.0, green: 160.0/255.0, blue: 226.0/255.0)
+        case "waterloo-city": return Color(red: 71.0/255.0, green: 204.0/255.0, blue: 200.0/255.0)
+        case "elizabeth": return Color(red: 255.0/255.0, green: 102.0/255.0, blue: 0.0/255.0)
         case "dlr": return Color(red: 0.00, green: 0.68, blue: 0.71)
         // Overground lines
         case "lioness", "mildmay", "windrush", "weaver", "suffragette", "liberty", "london-overground":
             return Color(red: 0.94, green: 0.45, blue: 0.00)
         // National Rail services
-        case "great-northern": return Color(red: 0.00, green: 0.38, blue: 0.67) // Great Northern Navy/Blue
+        case "great-northern": return Color(red: 0.00, green: 0.38, blue: 0.67)
         case "thameslink": return Color(red: 0.85, green: 0.10, blue: 0.38)
         case "southeastern": return Color(red: 0.10, green: 0.45, blue: 0.75)
         case "southern": return Color(red: 0.52, green: 0.75, blue: 0.18)

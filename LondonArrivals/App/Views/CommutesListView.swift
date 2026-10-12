@@ -11,19 +11,35 @@ public struct CommutesListView: View {
 
     public var body: some View {
         NavigationStack {
-            List {
-                ForEach(storage.commutes) { commute in
-                    CommuteRowCard(
-                        commute: commute,
-                        onSelect: { selectedCommuteForDetail = commute }
-                    )
-                    .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
+            ScrollView {
+                LazyVStack(spacing: 12) {
+                    if storage.commutes.isEmpty {
+                        ContentUnavailableView(
+                            "No Favourites",
+                            systemImage: "star.slash",
+                            description: Text("Tap the + button above to add your favorite commutes.")
+                        )
+                        .padding(.top, 60)
+                    } else {
+                        ForEach(storage.commutes) { commute in
+                            CommuteRowCard(
+                                commute: commute,
+                                onSelect: { selectedCommuteForDetail = commute }
+                            )
+                            .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                                Button(role: .destructive) {
+                                    if let index = storage.commutes.firstIndex(where: { $0.id == commute.id }) {
+                                        storage.deleteCommute(at: IndexSet(integer: index))
+                                    }
+                                } label: {
+                                    Label("Delete", systemImage: "trash")
+                                }
+                            }
+                        }
+                    }
                 }
-                .onDelete { offsets in
-                    storage.deleteCommute(at: offsets)
-                }
+                .padding(16)
             }
-            .listStyle(.insetGrouped)
             .navigationTitle("Favourites")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
@@ -55,41 +71,54 @@ struct CommuteRowCard: View {
         let destinationText = commute.destinationFilter ?? commute.directionFilters?.joined(separator: ", ") ?? commute.directionFilter ?? "Any"
 
         Button(action: onSelect) {
-            VStack(alignment: .leading, spacing: 6) {
-                HStack(spacing: 8) {
-                    TransportModeRoundel(mode: commute.mode)
-                        .scaleEffect(0.7)
-                        .frame(width: 28, height: 28)
+            HStack(spacing: 0) {
+                VStack(alignment: .leading, spacing: 6) {
+                    HStack(spacing: 8) {
+                        TransportModeRoundel(mode: commute.mode)
+                            .scaleEffect(0.7)
+                            .frame(width: 28, height: 28)
 
-                    Text(commute.originStationName)
-                        .font(.headline)
-                        .foregroundColor(.primary)
+                        Text(commute.originStationName)
+                            .font(.headline)
+                            .foregroundColor(.primary)
 
-                    Spacer()
+                        Spacer()
+                    }
 
-                    // Line Badge
+                    HStack(spacing: 4) {
+                        Image(systemName: "arrow.turn.down.right")
+                            .font(.caption2)
+                            .foregroundColor(.secondary)
+                        Text("Toward: \(destinationText)")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    }
+                    .padding(.leading, 34)
+                }
+                .padding(14)
+
+                Spacer(minLength: 8)
+
+                // Vertical accent strip with vertically oriented line name touching the accent color using official line color
+                HStack(spacing: -12) {
                     Text(commute.lineName)
-                        .font(.caption2)
-                        .fontWeight(.semibold)
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 3)
-                        .background(commute.theme.ledColor.opacity(0.15))
-                        .foregroundColor(commute.theme.ledColor)
-                        .clipShape(Capsule())
-                }
+                        .font(.system(size: 9, weight: .bold))
+                        .foregroundColor(.secondary)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
+                        .rotationEffect(.degrees(-90))
+                        .frame(width: 60, height: 20)
 
-                HStack(spacing: 4) {
-                    Image(systemName: "arrow.turn.down.right")
-                        .font(.caption2)
-                        .foregroundColor(.secondary)
-                    Text("Toward: \(destinationText)")
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
+                    TfLLine(id: commute.lineId, name: commute.lineName, modeName: commute.mode.rawValue)
+                        .lineColor
+                        .frame(width: 5)
+                        .clipShape(UnevenRoundedRectangle(topLeadingRadius: 0, bottomLeadingRadius: 0, bottomTrailingRadius: 14, topTrailingRadius: 14))
                 }
-                .padding(.leading, 26)
             }
-            .padding(.vertical, 8)
+            .background(Color(.secondarySystemBackground))
+            .clipShape(RoundedRectangle(cornerRadius: 14))
         }
+        .buttonStyle(.plain)
     }
 }
 
