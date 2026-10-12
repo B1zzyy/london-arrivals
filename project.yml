@@ -24,6 +24,9 @@ targets:
         buildPhase: sources
         compilerFlags: -D LA_WIDGET_FLOW_TEST
       - path: LondonArrivals/Shared
+        buildPhase: sources
+      - path: LondonArrivals/Shared/Models/tfl-london-stations.json
+        buildPhase: resources
       - path: LondonArrivalsWidget/SelectCommuteIntent.swift
     info:
       path: LondonArrivals/App/Info.plist

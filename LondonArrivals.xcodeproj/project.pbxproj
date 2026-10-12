@@ -40,6 +40,7 @@
 		9AE237DEC442ED223E1499CC /* ArrivalPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A9C0980CD869CBB206FAAC /* ArrivalPrediction.swift */; };
 		9FE45B1F9C3B28D29CA8C827 /* CommuteStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD50E7F0B310A4CE20D8CAB /* CommuteStorage.swift */; };
 		A1D056C698EF2AC2C759299E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B3FD20E6B218CACC732E6D4 /* Assets.xcassets */; };
+		A7F010A5B3D14CE090CBDBA1 /* tfl-london-stations.json in Resources */ = {isa = PBXBuildFile; fileRef = B7F010A5B3D14CE090CBDBA1 /* tfl-london-stations.json */; };
 		A6E2294B191CD0BEF4B95F32 /* AudioAnnouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3620726C6CA02C7768E20169 /* AudioAnnouncer.swift */; };
 		A6E8EBB4F8C7641971555EEF /* LEDGridBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF280DF5C2A6C68D930E86FE /* LEDGridBackground.swift */; };
 		ABDD7A250249BE51AA3ACF78 /* LargeWidgetBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60F530C1FFF3714BF870F06 /* LargeWidgetBoardView.swift */; };
@@ -113,6 +114,7 @@
 		6D30EF6782EA14B912B60EB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6F1BE5D3DA975E3715E793B5 /* LondonArrivalsWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LondonArrivalsWidgetBundle.swift; sourceTree = "<group>"; };
 		7B3FD20E6B218CACC732E6D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B7F010A5B3D14CE090CBDBA1 /* tfl-london-stations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "tfl-london-stations.json"; sourceTree = "<group>"; };
 		7DD50E7F0B310A4CE20D8CAB /* CommuteStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommuteStorage.swift; sourceTree = "<group>"; };
 		832225157667A8A47C584863 /* TfLStopPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TfLStopPoint.swift; sourceTree = "<group>"; };
 		A090A9D87FAEFCF91F216774 /* LondonArrivalsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LondonArrivalsWidget.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				66CB201F3F7301E4F286852C /* BoardTheme.swift */,
 				DC697EC5287DE923B282A97F /* FavouriteCommute.swift */,
 				BFD123B2C35EB1AFB5149878 /* TfLLine.swift */,
+				B7F010A5B3D14CE090CBDBA1 /* tfl-london-stations.json */,
 				832225157667A8A47C584863 /* TfLStopPoint.swift */,
 				057B584018181128F65926FF /* TransportMode.swift */,
 			);
@@ -351,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1D056C698EF2AC2C759299E /* Assets.xcassets in Resources */,
+				A7F010A5B3D14CE090CBDBA1 /* tfl-london-stations.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

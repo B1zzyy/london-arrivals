@@ -4,7 +4,7 @@ public struct AddCommuteView: View {
     @Environment(\.dismiss) private var dismiss
     @ObservedObject var storage: CommuteStorage
 
-    @State private var originStation: TfLStopPoint = TfLStopPoint.popularLondonStations[0]
+    @State private var originStation: TfLStopPoint = TfLStopPoint(id: "", commonName: "Choose a station")
     @State private var selectedMode: TransportMode = .tube
     @State private var selectedLine: TfLLine = TfLLine.curatedLondonLines[1]
     @State private var hasSelectedLine = true
@@ -15,6 +15,7 @@ public struct AddCommuteView: View {
     @State private var stationSearchText: String = ""
     @State private var searchResults: [TfLStopPoint] = []
     @State private var isSearchingStations = false
+    @State private var remoteSearchResults: [TfLStopPoint] = []
     @State private var isLoadingOptions = false
     @State private var showStationPicker = false
     @State private var isSelectingStation = false
@@ -26,9 +27,26 @@ public struct AddCommuteView: View {
     }
 
     private var stationsToDisplay: [TfLStopPoint] {
-        stationSearchText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
-            ? TfLStopPoint.popularLondonStations
-            : searchResults
+        let query = stationSearchText.trimmingCharacters(in: .whitespacesAndNewlines)
+        let source = query.isEmpty
+            ? TfLStopPoint.allLondonStations
+            : TfLStopPoint.allLondonStations.filter {
+                $0.commonName.localizedStandardContains(query) || $0.cleanName.localizedStandardContains(query)
+            } + remoteSearchResults.filter { remote in
+                !TfLStopPoint.allLondonStations.contains { $0.id == remote.id }
+            }
+        return source.sorted {
+            $0.cleanName.localizedCaseInsensitiveCompare($1.cleanName) == .orderedAscending
+        }
+    }
+
+    private var stationsGroupedByInitial: [(letter: String, stations: [TfLStopPoint])] {
+        let grouped = Dictionary(grouping: stationsToDisplay) { station in
+            String(station.cleanName.prefix(1)).uppercased()
+        }
+        return grouped.keys.sorted().map { letter in
+            (letter, grouped[letter] ?? [])
+        }
     }
 
     private var availableModes: [TransportMode] {
@@ -191,16 +209,11 @@ public struct AddCommuteView: View {
             .sheet(isPresented: $showStationPicker) {
                 NavigationStack {
                     List {
-                        if isSearchingStations {
-                            HStack { Spacer(); ProgressView("Searching stations…"); Spacer() }
-                        } else {
-                            ForEach(
-                                stationSearchText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
-                                    ? TfLStopPoint.popularLondonStations
-                                    : searchResults
-                            ) { station in
-                                Button {
-                                    guard !isSelectingStation else { return }
+                        ForEach(stationsGroupedByInitial, id: \.letter) { group in
+                            Section(group.letter) {
+                                ForEach(group.stations) { station in
+                                    Button {
+                                        guard !isSelectingStation else { return }
                                     NSLog("[LA-DIAG][AddCommute] station tap id=%@ name=%@", station.id, station.commonName)
                                     isSelectingStation = true
                                     Task { @MainActor in
@@ -250,10 +263,11 @@ public struct AddCommuteView: View {
                                         isSelectingStation = false
                                         showStationPicker = false
                                     }
-                                } label: {
-                                    VStack(alignment: .leading, spacing: 3) {
-                                        Text(station.cleanName).foregroundStyle(.primary)
-                                        Text(station.modes.joined(separator: ", ")).font(.caption).foregroundStyle(.secondary)
+                                    } label: {
+                                            VStack(alignment: .leading, spacing: 3) {
+                                                Text(station.cleanName).foregroundStyle(.primary)
+                                                Text(station.modes.joined(separator: ", ")).font(.caption).foregroundStyle(.secondary)
+                                            }
                                     }
                                 }
                             }
@@ -361,8 +375,18 @@ public struct AddCommuteView: View {
         let generation = stationSearchGeneration
         stationSearchTask?.cancel()
         let trimmed = query.trimmingCharacters(in: .whitespacesAndNewlines)
+        remoteSearchResults = []
         guard !trimmed.isEmpty else {
             searchResults = []
+            remoteSearchResults = []
+            isSearchingStations = false
+            return
+        }
+        remoteSearchResults = []
+        let localMatches = TfLStopPoint.allLondonStations.filter {
+            $0.commonName.localizedStandardContains(trimmed) || $0.cleanName.localizedStandardContains(trimmed)
+        }
+        guard localMatches.isEmpty else {
             isSearchingStations = false
             return
         }
@@ -372,7 +396,7 @@ public struct AddCommuteView: View {
             guard !Task.isCancelled, generation == stationSearchGeneration else { return }
             let results = await TfLService.shared.searchStations(query: trimmed)
             guard !Task.isCancelled, generation == stationSearchGeneration else { return }
-            searchResults = results
+            remoteSearchResults = results
             isSearchingStations = false
             NSLog("[LA-DIAG][AddCommute] search complete query=%@ resultCount=%ld", trimmed, results.count)
         }

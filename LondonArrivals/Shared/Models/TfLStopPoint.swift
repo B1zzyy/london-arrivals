@@ -27,6 +27,16 @@ public struct TfLStopPoint: Identifiable, Codable, Equatable, Hashable {
         return name.trimmingCharacters(in: .whitespaces)
     }
 
+    /// Complete preloaded TfL directory of selectable Tube, Overground, DLR and Elizabeth line stations.
+    public static let allLondonStations: [TfLStopPoint] = {
+        guard let url = Bundle.main.url(forResource: "tfl-london-stations", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let stations = try? JSONDecoder().decode([TfLStopPoint].self, from: data) else {
+            return popularLondonStations
+        }
+        return stations
+    }()
+
     /// Curated list of popular London transport hubs (Tube, Elizabeth line, Overground, DLR)
     /// National Rail stations removed as TfL API doesn't provide reliable real-time data for them
     public static var popularLondonStations: [TfLStopPoint] {
