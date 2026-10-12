@@ -27,14 +27,28 @@ public struct TfLStopPoint: Identifiable, Codable, Equatable, Hashable {
         return name.trimmingCharacters(in: .whitespaces)
     }
 
-    /// Complete preloaded TfL directory of selectable Tube, Overground, DLR and Elizabeth line stations.
+    /// Complete preloaded TfL directory of selectable Tube, Overground, DLR and Elizabeth line stations, with duplicate clean names merged.
     public static let allLondonStations: [TfLStopPoint] = {
         guard let url = Bundle.main.url(forResource: "tfl-london-stations", withExtension: "json"),
               let data = try? Data(contentsOf: url),
-              let stations = try? JSONDecoder().decode([TfLStopPoint].self, from: data) else {
+              let rawStations = try? JSONDecoder().decode([TfLStopPoint].self, from: data) else {
             return popularLondonStations
         }
-        return stations
+        
+        var dictionary: [String: TfLStopPoint] = [:]
+        for station in rawStations {
+            let key = station.cleanName.lowercased()
+            if var existing = dictionary[key] {
+                let mergedModes = Array(Set(existing.modes + station.modes))
+                let mergedLines = Array(Set(existing.lines + station.lines))
+                let bestId = existing.id.hasPrefix("HUB") ? existing.id : (station.id.hasPrefix("HUB") ? station.id : existing.id)
+                let bestCommonName = existing.commonName.count >= station.commonName.count ? existing.commonName : station.commonName
+                dictionary[key] = TfLStopPoint(id: bestId, commonName: bestCommonName, modes: mergedModes, lines: mergedLines, lat: existing.lat ?? station.lat, lon: existing.lon ?? station.lon)
+            } else {
+                dictionary[key] = station
+            }
+        }
+        return Array(dictionary.values)
     }()
 
     /// Curated list of popular London transport hubs (Tube, Elizabeth line, Overground, DLR)

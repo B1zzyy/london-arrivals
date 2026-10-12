@@ -10,7 +10,7 @@ public struct ContentView: View {
         TabView(selection: $selectedTab) {
             LiveBoardDetailView(storage: storage)
                 .tabItem {
-                    Label("Live Board", systemImage: "rectangle.and.waveform")
+                    Label("Live Board", systemImage: "tram.fill")
                 }
                 .tag(0)
 
@@ -46,7 +46,7 @@ private struct AccountView: View {
                 if storage.commutes.isEmpty {
                     ContentUnavailableView(
                         "No boards yet",
-                        systemImage: "rectangle.and.waveform",
+                        systemImage: "tram.fill",
                         description: Text("Add a board from the Live Board tab to customize its theme.")
                     )
                 } else {
