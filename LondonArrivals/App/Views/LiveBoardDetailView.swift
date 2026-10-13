@@ -49,7 +49,7 @@ public struct LiveBoardDetailView: View {
     }
     
     private var boardTitle: String {
-        "\(currentStationName) · \(currentLineName)"
+        "\(currentStationName) - \(currentLineName)"
     }
     
     private var boardPlatform: String {
@@ -64,7 +64,7 @@ public struct LiveBoardDetailView: View {
                         TabView(selection: $selectedCommuteId) {
                             ForEach(storage.commutes) { commute in
                                 DotMatrixBoardView(
-                                    commuteTitle: "\(commute.originStationName) · \(commute.lineName)",
+                                    commuteTitle: "\(commute.originStationName) - \(commute.lineName)",
                                     platformName: "",
                                     predictions: commute.id == currentCommuteId ? predictions : [],
                                     theme: commute.theme,

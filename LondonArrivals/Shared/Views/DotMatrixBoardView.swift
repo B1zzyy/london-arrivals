@@ -57,35 +57,12 @@ public struct DotMatrixBoardView: View {
             VStack(alignment: .leading, spacing: statusInHeader ? 3 : 6) {
                 // Top Platform Header Bar
                 if showHeader {
-                    HStack(spacing: 6) {
-                        Circle()
-                            .fill(theme.ledColor)
-                            .frame(width: 4, height: 4)
-                            .shadow(color: theme.glowColor, radius: 2)
-
-                        DotMatrixText(
-                            headerTitle.uppercased(),
-                            size: max(10, fontSize - 2),
-                            weight: .semibold,
-                            theme: theme,
-                            tracking: 1.2
-                        )
-                        .lineLimit(1)
-
-                        Spacer()
-
-                        if statusInHeader {
-                            DotMatrixText(
-                                (statusText ?? "GOOD SERVICE").uppercased(),
-                                size: max(9, fontSize - 3),
-                                weight: .medium,
-                                theme: theme,
-                                tracking: 0.6
-                            )
-                            .lineLimit(1)
-                        } else {
-                        }
-                    }
+                    MarqueeHeaderView(
+                        title: headerTitle.uppercased(),
+                        statusText: statusInHeader ? (statusText ?? "GOOD SERVICE").uppercased() : nil,
+                        theme: theme,
+                        fontSize: fontSize
+                    )
                     .padding(.bottom, 2)
 
                     // Subtle separator line
@@ -140,11 +117,6 @@ public struct DotMatrixBoardView: View {
                         .padding(.top, 2)
 
                     HStack(spacing: 6) {
-                        Circle()
-                            .fill(theme.ledColor)
-                            .frame(width: 3.5, height: 3.5)
-                            .shadow(color: theme.glowColor, radius: 2)
-
                         DotMatrixText(
                             tickerMessage.uppercased(),
                             size: max(9.5, fontSize - 3),
@@ -176,6 +148,126 @@ public struct DotMatrixBoardView: View {
         }
         return ""
     }
+}
+
+/// Marquee header view that scrolls left-to-right only if text exceeds available width
+struct MarqueeHeaderView: View {
+    let title: String
+    let statusText: String?
+    let theme: BoardTheme
+    let fontSize: CGFloat
+
+    @State private var animate = false
+
+    var body: some View {
+        HStack(spacing: 12) {
+            GeometryReader { geo in
+                ZStack(alignment: .leading) {
+                    // Measuring text width via hidden background text or estimation
+                    MarqueeInnerView(title: title, theme: theme, fontSize: fontSize)
+                }
+                .frame(width: geo.size.width, height: geo.size.height, alignment: .leading)
+                .clipped()
+            }
+            .frame(height: max(14, fontSize))
+
+            if let status = statusText {
+                DotMatrixText(
+                    status,
+                    size: max(9, fontSize - 3),
+                    weight: .medium,
+                    theme: theme,
+                    tracking: 0.6
+                )
+                .lineLimit(1)
+                .layoutPriority(1)
+            }
+        }
+    }
+}
+
+struct MarqueeInnerView: View {
+    let title: String
+    let theme: BoardTheme
+    let fontSize: CGFloat
+
+    @State private var textWidth: CGFloat = 0
+    @State private var containerWidth: CGFloat = 0
+    @State private var offset: CGFloat = 0
+    @State private var isAnimating: Bool = false
+
+    var body: some View {
+        GeometryReader { proxy in
+            let w = proxy.size.width
+            ZStack(alignment: .leading) {
+                DotMatrixText(
+                    title,
+                    size: max(10, fontSize - 2),
+                    weight: .semibold,
+                    theme: theme,
+                    tracking: 1.2
+                )
+                .fixedSize(horizontal: true, vertical: false)
+                .background(
+                    GeometryReader { textProxy in
+                        Color.clear.onAppear {
+                            textWidth = textProxy.size.width
+                            containerWidth = w
+                            checkAnimation()
+                        }
+                        .onChange(of: textProxy.size.width) { _, newW in
+                            textWidth = newW
+                            checkAnimation()
+                        }
+                    }
+                )
+                .offset(x: offset)
+            }
+            .onChange(of: w) { _, newC in
+                containerWidth = newC
+                checkAnimation()
+            }
+        }
+    }
+
+    private func checkAnimation() {
+        guard textWidth > containerWidth, containerWidth > 0 else {
+            offset = 0
+            isAnimating = false
+            return
+        }
+        if !isAnimating {
+            isAnimating = true
+            startMarquee()
+        }
+    }
+
+    private func startMarquee() {
+        let distance = textWidth - containerWidth + 20
+        let duration = Double(distance) * 0.05 // smooth speed
+
+        // Initial pause at start
+        offset = 0
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            guard isAnimating else { return }
+            withAnimation(.linear(duration: duration)) {
+                offset = -distance
+            }
+            // Pause at end then reset
+            DispatchQueue.main.asyncAfter(deadline: .now() + duration + 1.5) {
+                guard isAnimating else { return }
+                withAnimation(.easeInOut(duration: 0.5)) {
+                    offset = 0
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    if isAnimating {
+                        startMarquee()
+                    }
+                }
+            }
+        }
+    }
+
 
 }
 
