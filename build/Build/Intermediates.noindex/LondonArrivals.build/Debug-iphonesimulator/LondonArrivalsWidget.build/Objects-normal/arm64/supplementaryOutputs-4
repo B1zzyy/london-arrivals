@@ -1,0 +1,23 @@
+{
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Models/BoardTheme.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/BoardTheme.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/BoardTheme.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/BoardTheme.dia",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/BoardTheme.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/BoardTheme.swiftdeps"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Services/CommuteStorage.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/CommuteStorage.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/CommuteStorage.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/CommuteStorage.dia",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/CommuteStorage.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/CommuteStorage.swiftdeps"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Views/BoardBezelView.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/BoardBezelView.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/BoardBezelView.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/BoardBezelView.dia",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/BoardBezelView.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/BoardBezelView.swiftdeps"
+  }
+}

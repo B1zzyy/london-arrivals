@@ -1,0 +1,37 @@
+{
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/App/Views/AddCommuteView.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/AddCommuteView.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/AddCommuteView.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/AddCommuteView.dia",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/AddCommuteView.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/AddCommuteView.swiftdeps"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/App/Views/TransportModeRoundel.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/TransportModeRoundel.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/TransportModeRoundel.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/TransportModeRoundel.dia",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/TransportModeRoundel.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/TransportModeRoundel.swiftdeps"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Models/ArrivalPrediction.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/ArrivalPrediction.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/ArrivalPrediction.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/ArrivalPrediction.dia",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/ArrivalPrediction.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/ArrivalPrediction.swiftdeps"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Services/ArrivalCache.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/ArrivalCache.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/ArrivalCache.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/ArrivalCache.dia",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/ArrivalCache.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/ArrivalCache.swiftdeps"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Services/AudioAnnouncer.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/AudioAnnouncer.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/AudioAnnouncer.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/AudioAnnouncer.dia",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/AudioAnnouncer.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/AudioAnnouncer.swiftdeps"
+  }
+}

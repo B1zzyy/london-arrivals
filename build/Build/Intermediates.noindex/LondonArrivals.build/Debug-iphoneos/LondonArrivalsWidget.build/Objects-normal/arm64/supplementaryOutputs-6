@@ -1,0 +1,23 @@
+{
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Services/NetworkRailService.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/NetworkRailService.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/NetworkRailService.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/NetworkRailService.dia",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/NetworkRailService.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/NetworkRailService.swiftdeps"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/WidgetViews/MediumWidgetBoardView.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/MediumWidgetBoardView.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/MediumWidgetBoardView.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/MediumWidgetBoardView.dia",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/MediumWidgetBoardView.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/MediumWidgetBoardView.swiftdeps"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivalsWidget/SelectCommuteIntent.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/SelectCommuteIntent.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/SelectCommuteIntent.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/SelectCommuteIntent.dia",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/SelectCommuteIntent.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/SelectCommuteIntent.swiftdeps"
+  }
+}

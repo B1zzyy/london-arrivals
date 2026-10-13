@@ -1,0 +1,23 @@
+{
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Models/FavouriteCommute.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/FavouriteCommute.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/FavouriteCommute.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/FavouriteCommute.dia",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/FavouriteCommute.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/FavouriteCommute.swiftdeps"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Views/LEDGridBackground.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LEDGridBackground.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LEDGridBackground.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LEDGridBackground.dia",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LEDGridBackground.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LEDGridBackground.swiftdeps"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/WidgetViews/LargeWidgetBoardView.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LargeWidgetBoardView.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LargeWidgetBoardView.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LargeWidgetBoardView.dia",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LargeWidgetBoardView.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LargeWidgetBoardView.swiftdeps"
+  }
+}

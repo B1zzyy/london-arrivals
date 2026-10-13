@@ -6,7 +6,7 @@
 	<integer>13</integer>
 	<key>logs</key>
 	<dict>
-		<key>DBD4C703-CFA9-4EBA-B236-9BFD40D663B2</key>
+		<key>27CC0B8C-F1A2-4AB3-9440-F6DC91A46F71</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,7 +15,91 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>DBD4C703-CFA9-4EBA-B236-9BFD40D663B2.xcactivitylog</string>
+			<string>27CC0B8C-F1A2-4AB3-9440-F6DC91A46F71.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>5</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>LondonArrivals project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>LondonArrivals</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project LondonArrivals with scheme LondonArrivals and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>813581199.51785004</real>
+			<key>timeStoppedRecording</key>
+			<real>813581205.02293396</real>
+			<key>title</key>
+			<string>Building project LondonArrivals with scheme LondonArrivals and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>27CC0B8C-F1A2-4AB3-9440-F6DC91A46F71</string>
+		</dict>
+		<key>8C457A95-75F1-46C3-98B0-1AA1BA9292DF</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>8C457A95-75F1-46C3-98B0-1AA1BA9292DF.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>3</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>LondonArrivals project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>LondonArrivals</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project LondonArrivals with scheme LondonArrivals and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>813580614.36531103</real>
+			<key>timeStoppedRecording</key>
+			<real>813580621.16398001</real>
+			<key>title</key>
+			<string>Building project LondonArrivals with scheme LondonArrivals and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>8C457A95-75F1-46C3-98B0-1AA1BA9292DF</string>
+		</dict>
+		<key>8C9E010A-A309-44A2-BBE0-C04E0DEBB88D</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>8C9E010A-A309-44A2-BBE0-C04E0DEBB88D.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -29,7 +113,7 @@
 				<key>totalNumberOfTestFailures</key>
 				<integer>0</integer>
 				<key>totalNumberOfWarnings</key>
-				<integer>0</integer>
+				<integer>1</integer>
 			</dict>
 			<key>schemeIdentifier-containerName</key>
 			<string>LondonArrivals project</string>
@@ -40,13 +124,13 @@
 			<key>signature</key>
 			<string>Building project LondonArrivals with scheme LondonArrivals and configuration Debug</string>
 			<key>timeStartedRecording</key>
-			<real>813566222.90121901</real>
+			<real>813581076.53164804</real>
 			<key>timeStoppedRecording</key>
-			<real>813566226.05401099</real>
+			<real>813581080.31243205</real>
 			<key>title</key>
 			<string>Building project LondonArrivals with scheme LondonArrivals and configuration Debug</string>
 			<key>uniqueIdentifier</key>
-			<string>DBD4C703-CFA9-4EBA-B236-9BFD40D663B2</string>
+			<string>8C9E010A-A309-44A2-BBE0-C04E0DEBB88D</string>
 		</dict>
 	</dict>
 </dict>

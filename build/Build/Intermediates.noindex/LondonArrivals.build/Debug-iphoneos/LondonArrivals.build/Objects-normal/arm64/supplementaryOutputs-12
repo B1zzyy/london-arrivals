@@ -1,0 +1,30 @@
+{
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/App/LondonArrivalsApp.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/LondonArrivalsApp.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/LondonArrivalsApp.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/LondonArrivalsApp.dia",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/LondonArrivalsApp.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/LondonArrivalsApp.swiftdeps"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/App/Views/LineStatusView.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/LineStatusView.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/LineStatusView.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/LineStatusView.dia",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/LineStatusView.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/LineStatusView.swiftdeps"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/App/Views/LiveBoardDetailView.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/LiveBoardDetailView.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/LiveBoardDetailView.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/LiveBoardDetailView.dia",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/LiveBoardDetailView.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/LiveBoardDetailView.swiftdeps"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/WidgetViews/LockScreenWidgetViews.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/LockScreenWidgetViews.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/LockScreenWidgetViews.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/LockScreenWidgetViews.dia",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/LockScreenWidgetViews.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivals.build/Objects-normal/arm64/LockScreenWidgetViews.swiftdeps"
+  }
+}

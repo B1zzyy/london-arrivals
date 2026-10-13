@@ -168,17 +168,13 @@ public struct DotMatrixBoardView: View {
     }
 
     private var tickerMessage: String {
-        if let custom = statusText, !custom.isEmpty {
-            return custom
+        if let first = predictions.first, let location = first.currentLocation, !location.isEmpty {
+            return location
         }
-        if let first = predictions.first {
-            if first.minutesUntilArrival == 0 {
-                return "TRAIN NOW STANDING AT PLATFORM"
-            } else if let location = first.currentLocation, !location.isEmpty {
-                return "\(first.cleanDestination) • \(location)"
-            }
+        if let first = predictions.first, first.minutesUntilArrival == 0 {
+            return "TRAIN NOW STANDING AT PLATFORM"
         }
-        return "GOOD SERVICE • LONDON UNDERGROUND"
+        return ""
     }
 
 }

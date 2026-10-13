@@ -34,7 +34,7 @@ public enum BoardTheme: String, CaseIterable, Codable, Identifiable {
         case .nationalRailGold:
             return Color(red: 1.0, green: 0.82, blue: 0.12) // National Rail yellow
         case .vintageGreen:
-            return Color(red: 0.25, green: 1.0, blue: 0.45) // Phosphor green
+            return Color(red: 0.04, green: 0.87, blue: 0.78) // Flurescent #0adec8
         case .matrixWhite:
             return Color(red: 0.94, green: 0.96, blue: 1.0) // Ice white
         }
@@ -48,7 +48,7 @@ public enum BoardTheme: String, CaseIterable, Codable, Identifiable {
         case .nationalRailGold:
             return Color(red: 1.0, green: 0.75, blue: 0.0).opacity(0.6)
         case .vintageGreen:
-            return Color(red: 0.15, green: 0.9, blue: 0.35).opacity(0.55)
+            return Color(red: 0.04, green: 0.87, blue: 0.78).opacity(0.6)
         case .matrixWhite:
             return Color(red: 0.7, green: 0.85, blue: 1.0).opacity(0.5)
         }
@@ -62,7 +62,7 @@ public enum BoardTheme: String, CaseIterable, Codable, Identifiable {
         case .nationalRailGold:
             return Color(red: 0.14, green: 0.12, blue: 0.02)
         case .vintageGreen:
-            return Color(red: 0.02, green: 0.14, blue: 0.05)
+            return Color(red: 0.04, green: 0.87, blue: 0.78).opacity(0.08)
         case .matrixWhite:
             return Color(red: 0.10, green: 0.12, blue: 0.15)
         }

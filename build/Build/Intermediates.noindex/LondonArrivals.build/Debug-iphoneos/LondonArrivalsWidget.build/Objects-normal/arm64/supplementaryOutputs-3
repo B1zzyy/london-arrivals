@@ -1,0 +1,23 @@
+{
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Views/DotMatrixBoardView.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/DotMatrixBoardView.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/DotMatrixBoardView.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/DotMatrixBoardView.dia",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/DotMatrixBoardView.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/DotMatrixBoardView.swiftdeps"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Views/DotMatrixText.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/DotMatrixText.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/DotMatrixText.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/DotMatrixText.dia",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/DotMatrixText.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/DotMatrixText.swiftdeps"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Widgets/CommuteWidgetTimelineProvider.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/CommuteWidgetTimelineProvider.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/CommuteWidgetTimelineProvider.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/CommuteWidgetTimelineProvider.dia",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/CommuteWidgetTimelineProvider.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphoneos/LondonArrivalsWidget.build/Objects-normal/arm64/CommuteWidgetTimelineProvider.swiftdeps"
+  }
+}

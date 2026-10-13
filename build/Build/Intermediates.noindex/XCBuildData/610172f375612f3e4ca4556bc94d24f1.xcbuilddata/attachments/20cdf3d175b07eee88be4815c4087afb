@@ -1,0 +1,239 @@
+{
+  "" : {
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LondonArrivalsWidget-primary.dia",
+    "emit-module-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LondonArrivalsWidget-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LondonArrivalsWidget-primary-emit-module.dia",
+    "pch" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LondonArrivalsWidget-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LondonArrivalsWidget-primary.swiftdeps"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Models/ArrivalPrediction.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/ArrivalPrediction.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/ArrivalPrediction.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/ArrivalPrediction.dia",
+    "index-unit-output-path" : "/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/ArrivalPrediction.o",
+    "llvm-bc" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/ArrivalPrediction.bc",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/ArrivalPrediction.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/ArrivalPrediction.swiftdeps",
+    "swiftmodule" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/ArrivalPrediction~partial.swiftmodule"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Models/BoardTheme.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/BoardTheme.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/BoardTheme.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/BoardTheme.dia",
+    "index-unit-output-path" : "/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/BoardTheme.o",
+    "llvm-bc" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/BoardTheme.bc",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/BoardTheme.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/BoardTheme.swiftdeps",
+    "swiftmodule" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/BoardTheme~partial.swiftmodule"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Models/FavouriteCommute.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/FavouriteCommute.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/FavouriteCommute.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/FavouriteCommute.dia",
+    "index-unit-output-path" : "/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/FavouriteCommute.o",
+    "llvm-bc" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/FavouriteCommute.bc",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/FavouriteCommute.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/FavouriteCommute.swiftdeps",
+    "swiftmodule" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/FavouriteCommute~partial.swiftmodule"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Models/TfLLine.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TfLLine.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TfLLine.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TfLLine.dia",
+    "index-unit-output-path" : "/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TfLLine.o",
+    "llvm-bc" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TfLLine.bc",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TfLLine.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TfLLine.swiftdeps",
+    "swiftmodule" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TfLLine~partial.swiftmodule"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Models/TfLStopPoint.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TfLStopPoint.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TfLStopPoint.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TfLStopPoint.dia",
+    "index-unit-output-path" : "/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TfLStopPoint.o",
+    "llvm-bc" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TfLStopPoint.bc",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TfLStopPoint.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TfLStopPoint.swiftdeps",
+    "swiftmodule" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TfLStopPoint~partial.swiftmodule"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Models/TransportMode.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TransportMode.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TransportMode.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TransportMode.dia",
+    "index-unit-output-path" : "/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TransportMode.o",
+    "llvm-bc" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TransportMode.bc",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TransportMode.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TransportMode.swiftdeps",
+    "swiftmodule" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TransportMode~partial.swiftmodule"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Services/ArrivalCache.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/ArrivalCache.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/ArrivalCache.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/ArrivalCache.dia",
+    "index-unit-output-path" : "/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/ArrivalCache.o",
+    "llvm-bc" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/ArrivalCache.bc",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/ArrivalCache.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/ArrivalCache.swiftdeps",
+    "swiftmodule" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/ArrivalCache~partial.swiftmodule"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Services/AudioAnnouncer.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/AudioAnnouncer.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/AudioAnnouncer.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/AudioAnnouncer.dia",
+    "index-unit-output-path" : "/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/AudioAnnouncer.o",
+    "llvm-bc" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/AudioAnnouncer.bc",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/AudioAnnouncer.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/AudioAnnouncer.swiftdeps",
+    "swiftmodule" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/AudioAnnouncer~partial.swiftmodule"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Services/CommuteStorage.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/CommuteStorage.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/CommuteStorage.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/CommuteStorage.dia",
+    "index-unit-output-path" : "/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/CommuteStorage.o",
+    "llvm-bc" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/CommuteStorage.bc",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/CommuteStorage.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/CommuteStorage.swiftdeps",
+    "swiftmodule" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/CommuteStorage~partial.swiftmodule"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Services/NetworkRailService.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/NetworkRailService.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/NetworkRailService.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/NetworkRailService.dia",
+    "index-unit-output-path" : "/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/NetworkRailService.o",
+    "llvm-bc" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/NetworkRailService.bc",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/NetworkRailService.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/NetworkRailService.swiftdeps",
+    "swiftmodule" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/NetworkRailService~partial.swiftmodule"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Services/TfLService.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TfLService.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TfLService.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TfLService.dia",
+    "index-unit-output-path" : "/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TfLService.o",
+    "llvm-bc" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TfLService.bc",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TfLService.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TfLService.swiftdeps",
+    "swiftmodule" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/TfLService~partial.swiftmodule"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Views/BoardBezelView.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/BoardBezelView.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/BoardBezelView.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/BoardBezelView.dia",
+    "index-unit-output-path" : "/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/BoardBezelView.o",
+    "llvm-bc" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/BoardBezelView.bc",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/BoardBezelView.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/BoardBezelView.swiftdeps",
+    "swiftmodule" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/BoardBezelView~partial.swiftmodule"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Views/DotMatrixBoardView.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/DotMatrixBoardView.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/DotMatrixBoardView.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/DotMatrixBoardView.dia",
+    "index-unit-output-path" : "/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/DotMatrixBoardView.o",
+    "llvm-bc" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/DotMatrixBoardView.bc",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/DotMatrixBoardView.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/DotMatrixBoardView.swiftdeps",
+    "swiftmodule" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/DotMatrixBoardView~partial.swiftmodule"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Views/DotMatrixText.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/DotMatrixText.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/DotMatrixText.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/DotMatrixText.dia",
+    "index-unit-output-path" : "/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/DotMatrixText.o",
+    "llvm-bc" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/DotMatrixText.bc",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/DotMatrixText.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/DotMatrixText.swiftdeps",
+    "swiftmodule" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/DotMatrixText~partial.swiftmodule"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Views/LEDGridBackground.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LEDGridBackground.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LEDGridBackground.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LEDGridBackground.dia",
+    "index-unit-output-path" : "/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LEDGridBackground.o",
+    "llvm-bc" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LEDGridBackground.bc",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LEDGridBackground.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LEDGridBackground.swiftdeps",
+    "swiftmodule" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LEDGridBackground~partial.swiftmodule"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/WidgetViews/LargeWidgetBoardView.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LargeWidgetBoardView.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LargeWidgetBoardView.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LargeWidgetBoardView.dia",
+    "index-unit-output-path" : "/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LargeWidgetBoardView.o",
+    "llvm-bc" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LargeWidgetBoardView.bc",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LargeWidgetBoardView.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LargeWidgetBoardView.swiftdeps",
+    "swiftmodule" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LargeWidgetBoardView~partial.swiftmodule"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/WidgetViews/LockScreenWidgetViews.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LockScreenWidgetViews.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LockScreenWidgetViews.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LockScreenWidgetViews.dia",
+    "index-unit-output-path" : "/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LockScreenWidgetViews.o",
+    "llvm-bc" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LockScreenWidgetViews.bc",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LockScreenWidgetViews.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LockScreenWidgetViews.swiftdeps",
+    "swiftmodule" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LockScreenWidgetViews~partial.swiftmodule"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/WidgetViews/MediumWidgetBoardView.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/MediumWidgetBoardView.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/MediumWidgetBoardView.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/MediumWidgetBoardView.dia",
+    "index-unit-output-path" : "/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/MediumWidgetBoardView.o",
+    "llvm-bc" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/MediumWidgetBoardView.bc",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/MediumWidgetBoardView.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/MediumWidgetBoardView.swiftdeps",
+    "swiftmodule" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/MediumWidgetBoardView~partial.swiftmodule"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/WidgetViews/SmallWidgetBoardView.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/SmallWidgetBoardView.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/SmallWidgetBoardView.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/SmallWidgetBoardView.dia",
+    "index-unit-output-path" : "/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/SmallWidgetBoardView.o",
+    "llvm-bc" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/SmallWidgetBoardView.bc",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/SmallWidgetBoardView.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/SmallWidgetBoardView.swiftdeps",
+    "swiftmodule" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/SmallWidgetBoardView~partial.swiftmodule"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivals/Shared/Widgets/CommuteWidgetTimelineProvider.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/CommuteWidgetTimelineProvider.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/CommuteWidgetTimelineProvider.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/CommuteWidgetTimelineProvider.dia",
+    "index-unit-output-path" : "/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/CommuteWidgetTimelineProvider.o",
+    "llvm-bc" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/CommuteWidgetTimelineProvider.bc",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/CommuteWidgetTimelineProvider.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/CommuteWidgetTimelineProvider.swiftdeps",
+    "swiftmodule" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/CommuteWidgetTimelineProvider~partial.swiftmodule"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivalsWidget/LondonArrivalsWidget.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LondonArrivalsWidget.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LondonArrivalsWidget.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LondonArrivalsWidget.dia",
+    "index-unit-output-path" : "/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LondonArrivalsWidget.o",
+    "llvm-bc" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LondonArrivalsWidget.bc",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LondonArrivalsWidget.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LondonArrivalsWidget.swiftdeps",
+    "swiftmodule" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LondonArrivalsWidget~partial.swiftmodule"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivalsWidget/LondonArrivalsWidgetBundle.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LondonArrivalsWidgetBundle.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LondonArrivalsWidgetBundle.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LondonArrivalsWidgetBundle.dia",
+    "index-unit-output-path" : "/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LondonArrivalsWidgetBundle.o",
+    "llvm-bc" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LondonArrivalsWidgetBundle.bc",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LondonArrivalsWidgetBundle.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LondonArrivalsWidgetBundle.swiftdeps",
+    "swiftmodule" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/LondonArrivalsWidgetBundle~partial.swiftmodule"
+  },
+  "/Users/b1zzy/Desktop/new-test/LondonArrivalsWidget/SelectCommuteIntent.swift" : {
+    "const-values" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/SelectCommuteIntent.swiftconstvalues",
+    "dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/SelectCommuteIntent.d",
+    "diagnostics" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/SelectCommuteIntent.dia",
+    "index-unit-output-path" : "/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/SelectCommuteIntent.o",
+    "llvm-bc" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/SelectCommuteIntent.bc",
+    "object" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/SelectCommuteIntent.o",
+    "swift-dependencies" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/SelectCommuteIntent.swiftdeps",
+    "swiftmodule" : "/Users/b1zzy/Desktop/new-test/build/Build/Intermediates.noindex/LondonArrivals.build/Debug-iphonesimulator/LondonArrivalsWidget.build/Objects-normal/arm64/SelectCommuteIntent~partial.swiftmodule"
+  }
+}

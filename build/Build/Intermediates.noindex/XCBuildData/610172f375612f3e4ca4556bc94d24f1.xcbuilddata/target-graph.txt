@@ -1,0 +1,4 @@
+Target dependency graph (2 targets)
+Target 'LondonArrivals' in project 'LondonArrivals'
+➜ Explicit dependency on target 'LondonArrivalsWidget' in project 'LondonArrivals'
+Target 'LondonArrivalsWidget' in project 'LondonArrivals' (no dependencies)
