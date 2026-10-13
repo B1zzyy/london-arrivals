@@ -42,7 +42,7 @@ private struct ThemeCarouselView: View {
     }
 
     var body: some View {
-        VStack(spacing: 16) {
+        VStack(spacing: 8) {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 16) {
                     ForEach(BoardTheme.allCases) { theme in
@@ -91,7 +91,12 @@ private struct ThemeCarouselView: View {
                         }
                         .frame(width: 310)
                         .onTapGesture {
-                            selectedTheme = theme
+                            if selectedTheme != theme {
+                                selectedTheme = theme
+                                var updated = commute
+                                updated.theme = theme
+                                storage.updateCommute(updated)
+                            }
                         }
                         .id(theme)
                     }
@@ -99,28 +104,10 @@ private struct ThemeCarouselView: View {
                 .padding(.horizontal, 28)
             }
             .frame(height: 230)
-            .listRowInsets(EdgeInsets())
-
-            // Confirm Button
-            Button {
-                var updated = commute
-                updated.theme = selectedTheme
-                storage.updateCommute(updated)
-            } label: {
-                Text(commute.theme == selectedTheme ? "Selected Theme" : "Confirm Theme Selection")
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 12)
-                    .background(commute.theme == selectedTheme ? Color.secondary.opacity(0.2) : commute.theme.ledColor)
-                    .foregroundStyle(commute.theme == selectedTheme ? Color.primary : Color.black)
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
-            }
-            .disabled(commute.theme == selectedTheme)
-            .padding(.horizontal, 16)
-            .padding(.bottom, 8)
         }
         .padding(.vertical, 12)
+        .listRowInsets(EdgeInsets(top: 0, leading: -16, bottom: 0, trailing: -16))
+        .listRowBackground(Color(.secondarySystemGroupedBackground))
         .onChange(of: commute.theme) { newTheme in
             selectedTheme = newTheme
         }
@@ -130,6 +117,8 @@ private struct ThemeCarouselView: View {
 private struct AccountView: View {
     @ObservedObject var storage: CommuteStorage
     @State private var showingSettings = false
+    @State private var themesExpanded = true
+    @State private var settingsExpanded = false
 
     var body: some View {
         NavigationStack {
@@ -141,18 +130,40 @@ private struct AccountView: View {
                         description: Text("Add a board from the Live Board tab to customize its theme.")
                     )
                 } else if let primaryCommute = storage.primaryCommute {
-                    Section("Themes") {
-                        ThemeCarouselView(commute: primaryCommute, storage: storage)
-                            .listRowInsets(EdgeInsets())
-                            .listRowBackground(Color.clear)
+                    Section {
+                        DisclosureGroup(isExpanded: $themesExpanded) {
+                            ThemeCarouselView(commute: primaryCommute, storage: storage)
+                                .listRowInsets(EdgeInsets())
+                                .listRowBackground(Color.clear)
+                        } label: {
+                            Label {
+                                Text("Themes")
+                                    .font(.headline)
+                                    .foregroundStyle(.primary)
+                            } icon: {
+                                Image(systemName: "paintpalette")
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
                     }
                 }
 
                 Section {
-                    Button {
-                        showingSettings = true
+                    DisclosureGroup(isExpanded: $settingsExpanded) {
+                        Button {
+                            showingSettings = true
+                        } label: {
+                            Label("App Settings", systemImage: "gearshape")
+                        }
                     } label: {
-                        Label("App Settings", systemImage: "gearshape")
+                        Label {
+                            Text("Settings")
+                                .font(.headline)
+                                .foregroundStyle(.primary)
+                        } icon: {
+                            Image(systemName: "gearshape")
+                                .foregroundStyle(.secondary)
+                        }
                     }
                 }
             }
